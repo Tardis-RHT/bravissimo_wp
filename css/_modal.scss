@@ -1,0 +1,153 @@
+#modal_form {
+	width: 300px; 
+	height: 370px;
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+	background: #fff;
+	position: fixed;
+	top: 45%;
+	left: 50%;
+	margin-top: -150px;
+	margin-left: -150px;
+	display: none;
+	opacity: 0;
+	z-index: 5;
+	padding: 20px 10px;
+	.ajax-loader {
+		margin: -20px 0 0 115px;
+	}
+}
+
+#modal_form #modal_close {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 3px;
+	right: 3px;
+	cursor: pointer;
+	display: block;
+}
+
+#overlay {
+	z-index:3;
+	position:fixed;
+	background-color: #ffffff;
+	opacity:0.7;
+	-moz-opacity:0.7;
+	filter:alpha(opacity=70);
+	width:100%; 
+	height:100%;
+	top:0;
+	left:0;
+	display:none;
+}
+
+.modal_wrap {
+	input, textarea {
+		margin: 0 auto 10px 0;
+		width: 100%;
+		max-width: 260px;
+		line-height: 1;
+	}
+	textarea {
+		height: 100px;
+		resize: none;
+	}
+	input[type='submit']{
+		width: 100%;
+	}
+
+}
+
+
+
+.button_reset {
+	@extend %btn_red;
+	@extend %btn;
+	margin: auto;
+}
+
+.thankyou {
+	width: 300px; 
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+	background: #fff;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-top: -100px;
+	margin-left: -150px;
+	display: block;
+	z-index: 5;
+	padding: 20px 10px;
+	& h2 {
+		margin: 20px auto;
+		background-image: url(../img/h1.png);
+		background-repeat: no-repeat;
+		width: 280px;
+		background-size: 280px auto;
+		&::after {
+			display: none;
+		}
+		&::before {
+			display: none;
+		}
+	}
+}
+
+.thankyou_p {
+	text-align: center;
+	margin: 0 auto;
+	padding: 5px;
+	font-size: 16px;
+	line-height: 20px;
+	.thankyou_p:last-of-type {
+		margin-bottom: 20px;
+	}
+}
+
+.thankyou_btn {
+	@extend %btn_green;
+	margin: 20px auto;
+	width: 50%;
+
+}
+
+.thankyou_close {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 3px;
+	right: 3px;
+	cursor: pointer;
+	display: block;
+}
+
+.modal_hidden {
+	display: none;
+}
+
+
+
+@media screen and (min-width: 640px) {
+	#modal_form {
+		text-align: center;
+		width: 400px;
+		margin-left: -210px;
+			.ajax-loader {
+			margin: 0 0 0 170px;
+		}
+	}
+
+	.modal_wrap {
+		input, textarea {
+			max-width: 100%;
+			}
+		input[type='submit']{
+			width: 50%;
+			margin: 0 auto;
+			}
+	}
+
+	.thankyou {
+		margin-left: -160px;
+	}
+}

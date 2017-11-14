@@ -1,0 +1,58 @@
+
+.library {
+  @include flex;
+  justify-content: space-around;
+  flex-wrap:wrap ;
+}
+.library-wrapper {
+  padding: 20px;
+  box-shadow: 0px 0px 23px -4px rgba(0,0,0,0.4);
+  box-sizing: border-box;
+  border: 1px solid $silver;
+  width: 300px;
+  @include flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  h4{
+    text-align: center;
+    min-height: 45px;
+  }
+  ul{
+    padding: 10px;
+    li{
+      padding: 5px;
+    }
+  }
+}
+.library_button-download {
+  @extend %btn;
+  @extend %btn_red;
+  width: auto;
+  display: inline-block;
+}
+.library_img{
+  width: 190px;
+  min-height: 250px;
+  @include flex;
+  align-items: center;
+}
+.library_img_img{
+  width: 100%;
+  height: auto;
+}
+.library_annotation{
+  p{
+    text-align: left;
+  }
+  margin-bottom: 10px;
+}
+
+
+main{
+  min-height: calc(100vh - 406px);
+  @media screen and (min-width: 768px){
+    min-height: calc(100vh - 380px);
+
+  }
+}

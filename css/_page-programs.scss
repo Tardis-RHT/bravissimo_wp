@@ -1,0 +1,113 @@
+
+.programs {
+	margin: 0 auto 20px;
+	min-width: 300px;
+	max-width: 420px;
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+	padding: 10px;
+	text-align: center;
+	font-family: $roboto;
+	p {
+		padding-bottom: 10px;
+	}
+}
+
+.programs_circle {
+	margin: 0 auto;
+	@include border-radius(50%);
+	@extend %linear-gradient;
+	overflow: hidden;
+	width: 150px;
+	height: 150px;
+	font-family: $roboto;
+	font-weight: bold;
+	font-size: 100px;
+	text-transform: uppercase;
+	text-align: center;
+	position: relative;
+	z-index: 1;
+	line-height: 150px;
+	opacity: 0.7;
+}
+
+.programs_circle_small {
+	margin: 0 auto;
+    @include border-radius(50%);
+    @extend %linear-gradient;
+    overflow: hidden;
+    width: 150px;
+    height: 150px;
+    font-family: $roboto;
+    font-weight: bold;
+    font-size: 65px;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    line-height: 150px;
+    opacity: 0.7;
+}
+
+.program_single_length{
+	margin-top: 10px;
+}
+
+.programs-single_price {
+	box-sizing: border-box;
+	text-align: center;
+	padding-left: 27px;
+	position: relative;
+	font-weight: bold;
+}
+
+.programs-single_price::before {
+	position: absolute;
+	content: "";
+	background-image: url(../img/coins.svg);
+	background-repeat: no-repeat;
+	width: 16px;
+	height: 16px;
+	margin-left: -23px;
+	top: 3px;
+}
+
+.programs_description {
+	text-align: left;
+}
+
+.programs_timetable {
+	@include flex;
+	flex-deirection: row;
+	align-items: center;
+	justify-content: space-between;
+	font-family: $roboto;
+	padding: 5px;
+	border-bottom: solid 1px $dark_green;
+	margin-bottom: 10px;
+	background-color: $light_green_transparent;
+}
+
+.programs_timetable_item {
+	text-align: center;
+	width: 20%;
+	font-size: 12px;
+}
+
+.programs_comment {
+	font-size: 14px;
+	text-align: left;
+}
+
+@media only screen and (min-width: 760px) {
+	.programs {
+	margin: 0 auto 30px;
+	max-width: 1200px;
+	background-image: url('../img/Itinerary-bg.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	}
+
+	.programs_timetable_item {
+		font-size: 16px;
+	}
+}

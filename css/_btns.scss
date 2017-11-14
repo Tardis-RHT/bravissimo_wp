@@ -1,0 +1,37 @@
+@import 'mixins';
+
+%btn{
+	cursor: pointer;
+	border-width: 2px;
+	border-style: solid;
+	@include border-radius(30px);
+	font-size: 18px;
+	text-decoration: none;
+	line-height: 1;
+	font-family: $myriad;
+	padding: 11px 38px;
+	outline: none;
+	@include btn_transition;
+}
+
+%btn_green{
+	background-color: $dark_green;
+	border-color: $dark_green;
+	color: $white;
+	&:hover{
+		background-color: $white;
+		border-color: $dark_green;
+		color: $dark_green;
+	}
+}
+
+%btn_red{
+	background-color: transparent;
+	border-color: $red;
+	color: $red;
+	&:hover{
+		background-color: $red;
+		border-color: $red;
+		color: $white;
+	}
+}

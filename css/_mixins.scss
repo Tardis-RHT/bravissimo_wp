@@ -1,0 +1,35 @@
+@mixin flex{
+	display: -webkit-box;  /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
+    display: -moz-box;      /* Firefox 2 - 27 (2009 Spec), UC Mini */
+    display: -ms-flexbox;  /* IE10 (2012 Syntax) */
+    display: -webkit-flex;  /* Safari 6.1 - 8, Android < 4.4, BB < 10, Chrome 21 - 28 */
+    display: flex;               /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
+}@mixin border-radius($radius) {
+  border-radius: $radius;
+}
+@mixin border-radius-left($radius) {
+  border-top-left-radius: $radius;
+  border-bottom-left-radius: $radius;          
+}
+@mixin border-radius-right($radius) {
+  border-top-right-radius: $radius;
+  border-bottom-right-radius: $radius;          
+}
+@mixin border-radius-top($radius){
+ border-top-left-radius: $radius;
+ border-top-right-radius: $radius;
+}
+@mixin btn_transition {
+	transition: background-color .3s,
+				color .3s,
+				border-color .3s;
+}
+@mixin triangle ($color) {
+	content: '';
+	display: block;
+	position: absolute;
+	left: calc(50% - 10px);
+	top: -18px;
+	border: 10px solid transparent;
+	border-bottom: 10px solid $color;
+}

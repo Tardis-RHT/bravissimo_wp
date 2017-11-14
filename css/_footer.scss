@@ -1,0 +1,131 @@
+.wraper {
+    max-width: 1600px;
+    margin: 0 auto;
+      background: url("../img/pattern-dark-bg.png");
+}
+
+.footer_content {
+	box-sizing: border-box;
+    @include flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+	text-align: center;
+    flex-direction: row-reverse;
+}
+.footer_wraper-contacts{
+	margin-top: 10px;
+	text-align: center;
+	color: #334757;
+}
+.footer_contacts a{
+	margin: 5px;
+	text-align: center;
+	color: $white;
+	font-size: 16px;
+	&:hover{
+		color:#444;
+	}
+}
+.footer_icons-wraper{
+	@include flex;
+	justify-content: flex-end;
+	width: 150px;
+}
+.footer_logo{
+	margin-top: 10px;
+}
+.footer_links-logo{
+	width: 100px;
+	margin-top: 10px;
+}
+.footer_facebook-icons{
+	margin: 10px 0px 0px 10px;
+	background-image: url("../img/facebook-logo-in-circular.svg");
+	background-repeat: no-repeat;
+	width: 45px;
+	height: 45px;
+	background-size: contain;
+	border-radius: 50%;
+	&:hover{
+	background-color: $silver;	
+	}
+}
+.footer_instagram-icons{
+	margin: 10px 0 0 10px;
+	background-image: url("../img/instagram (1).svg");
+	background-repeat: no-repeat;
+	width: 45px;
+	height: 45px;
+	background-size: contain;
+	border-radius: 50%;
+	&:hover{
+	background-color: $silver;		
+	}
+}
+
+.footer_copywrite{
+	padding: 10px;
+	font-size: 14px;
+	text-align: center;
+	background: #1a2228;
+	color: #808080;
+	 background: url("../img/pattern-dark-bg.png");
+}
+
+@media screen and (min-width: 768px) {
+ .footer_links-logo{
+   width: 150px;
+  
+   margin-top: 10px;
+   margin: 0 auto;
+  }
+}
+@media screen and (max-width: 768px) {
+ .footer_content{
+   @include flex;
+   flex-direction: column-reverse;
+  }
+}
+@media screen and (max-width: 768px) {
+ .footer_icons-wraper{
+   @include flex;
+   justify-content: center;
+   margin: 0 auto;
+
+  }
+}
+
+.italian_wraper {
+	background-image: url("../img/body-bg.png");
+	@include flex;
+	justify-content: space-between;
+	flex-direction: column;
+	text-align: center;
+	box-sizing: border-box;
+	flex-wrap: wrap;
+	text-align: center;
+}
+
+.italian_for{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+}
+.italian-logs{
+    @include flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.italian_logo{
+	margin: 10px;
+}
+.italian_logo-single{
+	width: 100px;
+    margin-bottom: 5px;
+}
+.italian_icon-text{
+	color: $black;
+	font-size: 16px;
+}
+

@@ -1,0 +1,67 @@
+
+.education-types-title{
+	margin: 56px auto;
+}
+.education-types-container{
+	@include flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding-top: 115px;
+}
+.education-types_flex{
+	flex-wrap: wrap;
+	@include flex;
+	justify-content: space-around;
+	@media(min-width: 700px){
+		width: 100%;
+	}
+	@media(min-width: 1200px){
+		width: auto;
+	}
+}
+.education-type_single{
+	width: 270px;
+	margin: 0 10px 135px;
+	box-shadow: 0px 0px 23px -4px rgba(0,0,0,0.4);
+	padding: 10px;
+	background-color: $white;
+	ul{
+		padding-top: 10px;
+		li{
+			position: relative;
+			padding: 5px 10px 5px 25px;
+			text-align: left;
+			line-height: 18px;
+			&::before{
+				content: '';
+				display: inline-block;
+				width: 15px;
+				height: 15px;
+				background-image: url('../img/check-mark.svg');
+				background-size: contain;
+				position: absolute;
+				top: 5px;
+				left: 0;
+			}
+		}
+	}	
+}
+.education-type-bg{
+	border-radius: 50%;
+	overflow: hidden;
+	width: 200px;
+	height: 200px;
+	margin: -50% auto 0;
+	border: 10px solid $white;
+}
+.education-type-price::before{
+	content: '';
+	display: inline-block;
+	margin: 0 5px -3px;
+	background-image: url('../img/coins.svg');
+	height: 20px;
+	width: 20px;
+}
+.education-type-title{
+	min-height: 40px;
+}

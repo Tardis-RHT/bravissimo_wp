@@ -1,0 +1,122 @@
+//about us section//
+
+.about-us-bg{
+	background-image: url('../img/Itinerary-bg.jpg');
+	background-size: cover;
+	background-position: 0 -100px;
+	max-width: 1600px;
+	margin: 0 auto;
+}
+.why-us{
+	max-width: 960px;
+	margin: 50px auto;
+	padding-bottom: 10px;
+}
+.benefits-container{
+	@include flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.benefits-methods::before, .benefits-internship::before, .benefits-best-trainers::before {
+	content: '';
+	display: block;
+	width: 100px;
+	height: 100px;
+	background-image: url('../img/sprite.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin: 0 auto;
+}
+.benefits-methods::before {
+	background-position: 0 0;
+}
+.benefits-internship::before{
+	background-position: -110px 0;
+}
+.benefits-best-trainers::before{
+	background-position: -235px 0;
+}
+
+.benefits_title{
+	min-height: 40px;
+	line-height: 22px;
+}
+.benefits_about{
+}
+
+.benefits-methods, .benefits-internship, .benefits-best-trainers{
+	width: 280px;
+	margin: 20px;
+}
+
+
+//Teachers section//
+
+.our-teachers{
+	max-width: 960px;
+	margin: 0 auto 50px;
+}
+.our-teachers-container{
+	@include flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	padding-top: 60px;
+}
+.our-teachers_teacher{
+	width: 280px;
+	margin: 80px 20px;
+	box-shadow: 0px 0px 23px -4px rgba(0,0,0,0.4);
+	padding-bottom: 10px;
+	background-color: $white;
+}	
+.teacher_photo{
+	display: block;
+	overflow: hidden;
+	margin: 10px auto;
+	width: 180px;
+	height: 180px;
+	border-radius: 50%;
+	@extend %shadow;
+	margin-top: -90px;
+	box-shadow: 0px -2px 10px -4px rgba(0,0,0,0.4);
+	img {
+		width: 180px;
+	}
+}
+
+.teacher_about{
+	margin: 0 5px;
+	position: relative;
+	padding: 5px;
+}
+
+.teacher_about-position{
+	min-height: 45px;
+}
+.teacher_about-education, .teacher_about-additional{
+	margin-top: 10px;
+}
+.teacher_about-education{
+	margin-top: 10px;
+	ul{
+		padding-top: 10px;
+		li{
+			position: relative;
+			padding: 5px 10px 5px 25px;
+			text-align: left;
+			line-height: 18px;
+			&::before{
+				content: '';
+				display: inline-block;
+				width: 15px;
+				height: 15px;
+				background-image: url('../img/check-mark.svg');
+				background-size: contain;
+				position: absolute;
+				top: 5px;
+				left: 0;
+			}
+		}
+	}
+}

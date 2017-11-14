@@ -1,0 +1,100 @@
+.skype-lessons{	
+	background-image: url('../img/Itinerary-bg.jpg');
+	max-width: 1600px;
+	margin: 0 auto;
+	padding-bottom: 50px;
+}
+.skype-lessons_description-container{
+	@include flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	@media (min-width: 1070px){
+		justify-content: space-between;
+	}
+}
+.skype-lessons_description{
+	width: 280px;
+	margin: 0 10px 20px;
+	@media (min-width: 600px){
+		width: 500px;
+	}
+}
+
+.skype-lessons_form{
+	min-width: 280px;
+	margin-left: 0;
+	@media (min-width: 640px){
+		width: 500px;
+	}
+}
+.skype-lessons_form-name, 
+.skype-lessons_form-tel, 
+.skype-lessons_form-email, 
+.skype-lessons_form-skype{
+	@media (min-width: 640px){
+		width: 500px;
+	}
+}
+.skype-lessons_form-title{
+	font-size: 18px;
+	line-height: 18px;
+	text-align: center;
+	@media (min-width: 968px){
+		font-size: 24px;
+		line-height: 24px;
+		margin-left: 18px;
+	}
+}
+
+.skype-lessons_main-info{
+	@include flex;
+	justify-content: space-between;
+	padding-top: 20px;
+	width: 280px;
+	@media (min-width: 600px){
+		width: 500px;
+		justify-content: space-around;
+	}
+}
+.skype-lessons_main-info_single{
+	margin: 0 5px;
+	border: 1px solid $silver;
+	border-radius: 50%;
+	min-height: 120px;
+	min-width: 120px;
+	padding-top: 35px;
+	padding-left: 10px;
+	box-shadow: 0px 0px 23px -4px rgba(0,0,0,0.4);
+	background-color: $white;
+	text-align: left;
+	@media (min-width: 968px){
+		margin: 0 40px;
+		min-height: 150px;
+		min-width: 150px;
+		padding-top: 50px;
+		padding-left: 25px;
+	}
+}
+.skype-lessons_main-info-price{
+	margin-left: -5px;
+}
+.skype-lessons_main-info-price::before{
+	content: '';
+	display: inline-block;
+	margin: 0 5px -3px;
+	background-image: url('../img/coins.svg');
+	height: 20px;
+	width: 20px;
+}
+.skype-lessons_main-info-duration{
+	margin-bottom: 10px;
+	margin-left: -5px;
+}
+.skype-lessons_main-info-duration::before{
+	content: '';
+	display: inline-block;
+	margin: 0 5px -3px;
+	background-image: url('../img/clock.svg');
+	height: 20px;
+	width: 20px;
+}

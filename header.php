@@ -34,11 +34,11 @@
         <div class="header_contacts">
             <a class="header_contacts-num1"
                href="tel:'<?php echo get_post_meta(69, 'tel1', true); ?>'"><?php echo get_post_meta(69, 'tel1', true); ?></a>
-            <a class="header_contacts-num2"
+            <a class="header_contacts-email"
                href="mailto:'<?php echo get_post_meta(69, 'e-mail', true); ?>'"><?php echo get_post_meta(69, 'e-mail', true); ?></a>
         </div>
         <div class="header_menu-wrapper wrapper">
-            <nav class="header_menu-mobile" style="display: none">
+            <!-- <nav class="header_menu-mobile" style="display: none">
                 <ul class="header_menumobile-wrpapper">
                     <?php
                     if (!is_front_page()) {
@@ -54,34 +54,35 @@
                         <div class="phantom"></div>
                     </li>
                 </ul>
-            </nav>
-            <nav class="header_menu-desktop">
-                <ul class="header_menu">
-                    <li class="header_menu-element"><a href="/programs-and-schedules">
-                            <span class="header_menu-link">Программы</span>
-                        </a></li>
-                    <li class="header_menu-element"><a href="/about-us">
-                            <span class="header_menu-link">О нас</span>
-                        </a></li>
-                    <li class="header_logo-allways">
-                        <a class="header_logo-wrapper" href="<?php echo home_url(); ?>"><img class="header_logo"
-                                                                                             src="<?php echo get_template_directory_uri(); ?>/img/logo-1.png"></a>
-                    </li>
-                    <li class="header_menu-element"><a href="/contacts">
-                            <span class="header_menu-link">контакты</span>
-                        </a></li>
-                    <li class="header_menu-element"><a href="/our-library">
-                            <span class="header_menu-link">Библиотека</span>
-                        </a></li>
-                    <li class="header_menumobile-only">
-                        <div class="hamburger-icon" id="button_menu">
-                            <button class="hamburger-icon-btn">
-                                <span class="span_hamburger"></span>
-                            </button>
-                        </div>
-                    </li>
-                </ul>
-            </nav>
+            </nav> -->
+			<nav class="header_menu-desktop">
+            <ul class="header_menu">
+                <li>
+                    <a href="programs.html">Программы</a>
+                </li>
+                <li>
+                    <a href="about-us.html">О нас</a>
+                </li>
+            </ul>
+            <div class="header_logo-allways">
+                <a class="header_logo-wrapper" href="index.html"><img class="header_logo" src="img/logo-1.png"></a>
+                <li class="header_menumobile-only">
+                    <div class="hamburger-icon" id="button_menu">
+                        <button class="hamburger-icon-btn">
+                            <span class="span_hamburger"></span>
+                        </button>
+                    </div>
+                </li>
+            </div>
+            <ul class="header_menu">
+                <li>
+                    <a href="contacts.html">Контакты</a>
+                </li>
+                <li>
+                    <a href="library.html">Библиотека</a>
+                </li>
+            </ul>
+        </nav>
         </div>
     </div>
 </header>

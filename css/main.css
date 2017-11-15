@@ -1801,6 +1801,7 @@ label {
 }
 
 .library-wrapper {
+  margin-bottom: 20px;
   padding: 20px;
   box-shadow: 0px 0px 23px -4px rgba(0, 0, 0, 0.4);
   box-sizing: border-box;
@@ -1819,6 +1820,7 @@ label {
   flex-direction: column;
   align-items: center;
   text-align: left;
+  background-color: white;
 }
 
 .library-wrapper h4 {
@@ -1842,6 +1844,7 @@ label {
 .library_img {
   width: 190px;
   min-height: 250px;
+  height: 250px;
   display: -webkit-box;
   /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
   display: -moz-box;
@@ -1853,6 +1856,7 @@ label {
   display: flex;
   /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
   align-items: center;
+  overflow: hidden;
 }
 
 .library_img_img {

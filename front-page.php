@@ -5,7 +5,7 @@
 
 <section class="bg_wrapper margin-bottom">
     <div class="section_first-img">
-        <h1 class="section1_italy">Школа итальянского языка</h1>
+        <h1 class="section1_italy"><?php echo get_post_meta( $post->ID, 'main_title', true ); ?></h1>
         <button class="button popup">записаться</button>
     </div>
 

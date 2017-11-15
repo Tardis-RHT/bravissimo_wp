@@ -29,11 +29,14 @@
 <!-- header -->
 <header class="header">
     <div class="header_wrapper-1">
-        <div class="header_contacts wrapper">
-            <a class="header_contacts-num1"
-               href="tel:'<?php echo get_post_meta(69, 'tel1', true); ?>'"><?php echo get_post_meta(69, 'tel1', true); ?></a>
-            <a class="header_contacts-email"
-               href="mailto:'<?php echo get_post_meta(69, 'e-mail', true); ?>'"><?php echo get_post_meta(69, 'e-mail', true); ?></a>
+        <div class="header_hide wrapper">
+            <?php qtranxf_generateLanguageSelectCode($type='text'); ?>
+            <div class="header_contacts">
+                <a class="header_contacts-num1"
+                href="tel:'<?php echo get_post_meta(69, 'tel1', true); ?>'"><?php echo get_post_meta(69, 'tel1', true); ?></a>
+                <a class="header_contacts-email"
+                href="mailto:'<?php echo get_post_meta(69, 'e-mail', true); ?>'"><?php echo get_post_meta(69, 'e-mail', true); ?></a>
+            </div>
         </div>
         <div class="header_menu-wrapper wrapper">
 			<nav class="header_menu-desktop">

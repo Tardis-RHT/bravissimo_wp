@@ -1271,6 +1271,7 @@ label {
   justify-content: space-around;
   align-items: center;
   text-align: unset;
+  box-sizing: border-box;
 }
 
 .scroll .header_hide {
@@ -1425,6 +1426,22 @@ label {
   }
   .header_logo {
     margin: 0;
+  }
+}
+
+@media (min-width: 550px) {
+  .menu-item {
+    box-sizing: border-box;
+    padding: 5px;
+    border-bottom: solid 2px transparent;
+  }
+  .menu-item:hover {
+    border-bottom: solid 2px red;
+    visibility: visible;
+    transition: 0.3s;
+  }
+  .current-menu-item {
+    border-bottom: solid 2px red;
   }
 }
 

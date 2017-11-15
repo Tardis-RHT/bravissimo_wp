@@ -20,7 +20,7 @@
                     <a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/logo-1.png" alt="Bravissimo Studio" class="footer_links-logo"></a>
                 </div>
             </div>
-            <p class="footer_copywrite">&#169; 2012 - <?php echo date('Y'); ?> <?php echo get_post_meta( 69, 'copyright', true ); ?></p>
+            <p class="footer_copywrite">&#169; 2012 - <?php echo date('Y'); ?>. <?php echo get_post_meta( 69, 'copyright', true ); ?></p>
 </footer>
 
 </div>

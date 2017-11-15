@@ -27,8 +27,6 @@
 
 
 <!-- header -->
-
-
 <header class="header">
     <div class="header_wrapper-1">
         <div class="header_contacts">
@@ -38,34 +36,10 @@
                href="mailto:'<?php echo get_post_meta(69, 'e-mail', true); ?>'"><?php echo get_post_meta(69, 'e-mail', true); ?></a>
         </div>
         <div class="header_menu-wrapper wrapper">
-            <!-- <nav class="header_menu-mobile" style="display: none">
-                <ul class="header_menumobile-wrpapper">
-                    <?php
-                    if (!is_front_page()) {
-                        echo '<li><a href="' . get_home_url() . '">Главная</a></li>';
-                    }
-                    ?>
-
-                    <li><a href="/programs-and-schedules">Программы</a></li>
-                    <li><a href="/about-us">о нас</a></li>
-                    <li><a href="/contacts">контакты</a></li>
-                    <li><a href="/our-library">библиотека</a></li>
-                    <li>
-                        <div class="phantom"></div>
-                    </li>
-                </ul>
-            </nav> -->
 			<nav class="header_menu-desktop">
-            <ul class="header_menu">
-                <li>
-                    <a href="programs.html">Программы</a>
-                </li>
-                <li>
-                    <a href="about-us.html">О нас</a>
-                </li>
-            </ul>
+            <?php wp_nav_menu( array( 'theme_location' => 'header-menu-left', 'menu_class' => 'header_menu' ) ); ?>
             <div class="header_logo-allways">
-                <a class="header_logo-wrapper" href="index.html"><img class="header_logo" src="img/logo-1.png"></a>
+                <a class="header_logo-wrapper" href="<?php echo esc_url(home_url('/')) ?>"><img class="header_logo" src="<?php echo get_template_directory_uri(); ?>/img/logo-1.png"></a>
                 <li class="header_menumobile-only">
                     <div class="hamburger-icon" id="button_menu">
                         <button class="hamburger-icon-btn">
@@ -74,18 +48,10 @@
                     </div>
                 </li>
             </div>
-            <ul class="header_menu">
-                <li>
-                    <a href="contacts.html">Контакты</a>
-                </li>
-                <li>
-                    <a href="library.html">Библиотека</a>
-                </li>
-            </ul>
+            <?php wp_nav_menu( array( 'theme_location' => 'header-menu-right', 'menu_class' => 'header_menu' ) ); ?>
         </nav>
         </div>
     </div>
 </header>
-
 <div class="cont">
 <!-- /header -->

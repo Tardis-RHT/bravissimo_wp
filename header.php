@@ -29,7 +29,7 @@
 <!-- header -->
 <header class="header">
     <div class="header_wrapper-1">
-        <div class="header_contacts">
+        <div class="header_contacts wrapper">
             <a class="header_contacts-num1"
                href="tel:'<?php echo get_post_meta(69, 'tel1', true); ?>'"><?php echo get_post_meta(69, 'tel1', true); ?></a>
             <a class="header_contacts-email"

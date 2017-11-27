@@ -1429,22 +1429,6 @@ label {
   }
 }
 
-@media (min-width: 550px) {
-  .menu-item {
-    box-sizing: border-box;
-    padding: 5px;
-    border-bottom: solid 2px transparent;
-  }
-  .menu-item:hover {
-    border-bottom: solid 2px red;
-    visibility: visible;
-    transition: 0.3s;
-  }
-  .current-menu-item {
-    border-bottom: solid 2px red;
-  }
-}
-
 .language-chooser {
   display: flex;
   justify-content: flex-end;
@@ -1461,7 +1445,7 @@ label {
 .qtranxs_text {
   display: inline-block;
   position: relative;
-  padding: 0 8px;
+  padding: 0 4px;
 }
 
 .qtranxs_widget_end {
@@ -1470,6 +1454,22 @@ label {
 
 .language-chooser .active > a {
   color: #cc2211;
+}
+
+@media (min-width: 550px) {
+  .menu-item {
+    box-sizing: border-box;
+    padding: 5px;
+    border-bottom: solid 2px transparent;
+  }
+  .menu-item:hover {
+    border-bottom: solid 2px red;
+    visibility: visible;
+    transition: 0.3s;
+  }
+  .current-menu-item {
+    border-bottom: solid 2px red;
+  }
 }
 
 .flags_wrapper {

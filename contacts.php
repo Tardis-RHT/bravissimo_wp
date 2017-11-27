@@ -12,7 +12,7 @@ get_header(); ?>
         <div class="contact_wraper_bg">
             <div class="content_wrapper">
 
-                <h1 class="contact_p">Контaкты</h1>
+                <h1 class="contact_p"><?php echo get_the_title($page->ID) ?></h1>
 
                 <div class="contact_content">
 

@@ -9,7 +9,7 @@
     <!-- //about us section//
     //why us// -->
 <div class="about-us-bg">
-    <h1>О нас</h1>
+    <h1><?php echo get_the_title($page->ID) ?></h1>
     <section class="why-us">
         <h2 class="why-us_title">Почему мы?</h2>
         <div class="benefits-container">

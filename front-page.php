@@ -1,12 +1,4 @@
 <?php get_header(); ?>
-
-	<main role="main">
-    <?php 
-    require 'lang.php';
-    LangDicts::$dict = LangDicts::$rus;
-    if(get_locale() == 'ru_RU') LangDicts::$dict = LangDicts::$rus;
-    elseif(get_locale() == 'uk') LangDicts::$dict = LangDicts::$ukr;
-    ?>
 <!-- //italian picture// -->
 
 <section class="bg_wrapper margin-bottom">

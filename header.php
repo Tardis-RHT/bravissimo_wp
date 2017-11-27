@@ -5,27 +5,23 @@
     <title><?php wp_title(''); ?><?php if (wp_title('', false)) {
             echo ' :';
         } ?><?php bloginfo('name'); ?></title>
-
     <link href="//www.google-analytics.com" rel="dns-prefetch">
     <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/img/logo1.png" type="image/x-icon">
-
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="<?php bloginfo('description'); ?>">
-
- 
     <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/main.css">
     
-    
-
-
     <?php wp_head(); ?>
-
-
 </head>
 <body <?php body_class(); ?>>
-
-
+<?php 
+    require 'lang.php';
+    LangDicts::$dict = LangDicts::$rus;
+    if(get_locale() == 'ru_RU') LangDicts::$dict = LangDicts::$rus;
+    elseif(get_locale() == 'uk') LangDicts::$dict = LangDicts::$ukr;
+?>
+<main role="main">
 <!-- header -->
 <header class="header">
     <div class="header_wrapper-1">

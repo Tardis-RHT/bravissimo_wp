@@ -9,7 +9,7 @@
 <div class="cont">
 <article class="main">
     <section class="wrapper margin-bottom">
-        <h1>Библиотека</h1>
+        <h1><?php echo get_the_title($page->ID) ?></h1>
             <div class="library">
             <?php
             global $post;
@@ -31,7 +31,7 @@
                         $file = get_field('book');
                         if( $file ) {
                             $url = wp_get_attachment_url( $file );
-                            ?><a target="blank" class="library_button-download" href="<?php echo $url; ?>" >Скачать</a><?php
+                            ?><a target="blank" class="library_button-download" href="<?php echo $url; ?>" ><?php echo LangDicts::$dict['download']; ?></a><?php
                         }
                         ?>
                     </div>

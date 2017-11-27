@@ -1,7 +1,9 @@
 <?php
     class LangDicts {
         public static $rus = array(
+            // Buttons
             'submit' => 'Записаться',
+            'download' => 'Скачать',
 
             // Modal window
             'thankyou' => 'Спасибо',
@@ -42,7 +44,9 @@
             'ready_to_learn_txt' => 'Готов учить итальянский?'
                                 );   
         public static $ukr = array(
-            'submit' => 'Записатися', 
+            // Buttons
+            'submit' => 'Записатися',
+            'download' => 'Завантажити',
 
             // Modal window
             'thankyou' => 'Дякуємо',
@@ -54,7 +58,7 @@
             'programs_and' => 'Програми та розклад',
 
             // Section ItalianFor
-            'ital_for_txt' => 'Італьянська для',
+            'ital_for_txt' => 'Італійська для',
             'family' => "Сім'ї",
             'business' => 'Бізнесу',
             'edu' => 'Освіти',
@@ -66,7 +70,7 @@
             'we_offer' => 'Ми пропонуємо',
 
             // Section Countries
-            'talk_ital' => 'Италомовні країни',
+            'talk_ital' => 'Італомовні країни',
             'italy' => 'Італія',
             'vatican' => 'Ватикан',
             'san-marino' => 'Сан-Марино',

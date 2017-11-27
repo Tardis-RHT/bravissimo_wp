@@ -47,7 +47,7 @@ get_header(); ?>
                     </div>
 
                 </div>
-                <h2 class="contact-info_p">Свяжитесь с нами</h2>
+                <h2 class="contact-info_p"><?php echo LangDicts::$dict['contact_us']; ?></h2>
                 <div role="form" class="wpcf7" id="wpcf7-f200-o1" dir="ltr" style="" lang="en-US">
                     <form action="/contacts/#wpcf7-f200-o1" method="post"
                           class="wpcf7-form sent contacts_form contact-container"
@@ -63,42 +63,30 @@ get_header(); ?>
                         <div class="contact-form-container">
 
                         <div class="contact_wpraper-form">
-
                             <div class="contact_form-wrap">
-
                                 <div class="contact-left">
-
                                     <input name="your-name" value="" size="40"
                                            class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required contact_form "
-                                           aria-required="true" aria-invalid="false" type="text" placeholder="Ваше имя">
+                                           aria-required="true" aria-invalid="false" type="text" placeholder="<?php echo LangDicts::$dict['your_name']; ?>">
                                     <span class="wpcf7-form-control-wrap your-name"></span>
                                     <input name="tel-362" value="" size="40"
                                            class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel contact_form"
-                                           aria-required="true" aria-invalid="false" type="tel" placeholder="Телефон">
+                                           aria-required="true" aria-invalid="false" type="tel" placeholder="<?php echo LangDicts::$dict['phone']; ?>">
                                     <span class="wpcf7-form-control-wrap tel-362"></span>
                                     <input name="your-email" value="" size="40"
                                            class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email contact_form"
-                                           aria-required="true" aria-invalid="false" type="email" placeholder="E-mail">
+                                           aria-required="true" aria-invalid="false" type="email" placeholder="<?php echo LangDicts::$dict['email']; ?>">
                                     <span class="wpcf7-form-control-wrap your-email"></span>
                                 </div>
                                 <div class="contact-right">
-
-                    <textarea name="your-message" cols="40" rows="10"
-                              class="wpcf7-form-control wpcf7-textarea contacts_form-ques"
-                              aria-invalid="false" placeholder="Введите сообщение"></textarea>
-
+                                    <textarea name="your-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea contacts_form-ques" aria-invalid="false" placeholder="<?php echo LangDicts::$dict['message']; ?>"></textarea>
                                 </div>
-
                             </div>
                             <div class="contact_wpraper-form" style="justify-content: center">
-
-                            <input value="Отправить" class="wpcf7-form-control wpcf7-submit contact_submit"
-                                   type="submit">
-
-                            <div class="wpcf7-response-output wpcf7-display-none wpcf7-mail-sent-ok"
-                                style="display: none;" role="alert">
+                                <input value="<?php echo LangDicts::$dict['send']; ?>" class="wpcf7-form-control wpcf7-submit contact_submit" type="submit">
+                            <div class="wpcf7-response-output wpcf7-display-none wpcf7-mail-sent-ok" style="display: none;" role="alert">
                             </div>
-                            </div>
+                        </div>
                         </div>
                         </div>
                     

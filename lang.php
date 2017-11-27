@@ -4,6 +4,15 @@
             // Buttons
             'submit' => 'Записаться',
             'download' => 'Скачать',
+            'send' => 'Отправить',
+
+            // Forms
+            'name' => 'Имя',
+            'your_name' => "Ваше имя",
+            'phone' => 'Телефон',
+            'email' => 'Эл. адрес',
+            'comments' => 'Ваши комментарии',
+            'message' => 'Введите сообщение',
 
             // Modal window
             'thankyou' => 'Спасибо',
@@ -49,11 +58,24 @@
             'internship_txt' => 'Стажировка для лучших студентов',
             'pro_teachers_txt' => 'Преподаватели высшего уровня',
             'our_teachers_txt' => 'Наши учителя',
+                        
+            // Page Contacts
+            'contact_us' => 'Свяжитесь с нами',
                                 );   
         public static $ukr = array(
             // Buttons
             'submit' => 'Записатися',
             'download' => 'Завантажити',
+            'send' => 'Відправити',
+
+            // Forms
+            'name' => "Ім'я",
+            'your_name' => "Ваше ім'я",
+            'surname' => 'Прізвище',
+            'phone' => 'Телефон',
+            'email' => 'Ел. адреса',
+            'comments' => 'Ваші коментарі',
+            'message' => 'Введіть повідомлення',
 
             // Modal window
             'thankyou' => 'Дякуємо',
@@ -99,6 +121,9 @@
             'internship_txt' => 'Стажування для кращих студентів',
             'pro_teachers_txt' => 'Викладачі вищого рівня',
             'our_teachers_txt' => 'Наші вчителі',
+            
+            // Page Contacts
+            'contact_us' => "Зв'яжіться з нами",
         );                              
         public static $dict; // текущий словарь
     }

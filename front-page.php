@@ -27,19 +27,19 @@
                     <span class="wpcf7-form-control-wrap your-name"></span>
                     <input name="your-name" value="" size="40" 
                         class="wpcf7-form-control wpcf7-text name" 
-                        aria-invalid="false" type="text" placeholder="Имя">
+                        aria-invalid="false" type="text" placeholder="<?php echo LangDicts::$dict['name']; ?>">
                     <span class="wpcf7-form-control-wrap tel-124"></span>
                     <input name="tel-124" value="" size="40" 
                         class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required 
                         wpcf7-validates-as-tel tel" aria-required="true" aria-invalid="false" type="tel" 
-                        placeholder="Телефон">
+                        placeholder="<?php echo LangDicts::$dict['phone']; ?>">
                     <span class="wpcf7-form-control-wrap your-email"></span>
                     <input name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text 
                         wpcf7-email wpcf7-validates-as-email email" 
-                        aria-invalid="false" type="email" placeholder="E-mail">
+                        aria-invalid="false" type="email" placeholder="<?php echo LangDicts::$dict['email']; ?>">
                     <textarea name="your-message" cols="40" rows="10" class="wpcf7-form-control 
-                        wpcf7-textarea" aria-invalid="false" placeholder="Ваши комментарии"></textarea>
-                    <input value="Записаться" class="modal_submit wpcf7-form-control wpcf7-submit button_submit" 
+                        wpcf7-textarea" aria-invalid="false" placeholder="<?php echo LangDicts::$dict['comments']; ?>"></textarea>
+                    <input value="<?php echo LangDicts::$dict['submit']; ?>" class="modal_submit wpcf7-form-control wpcf7-submit button_submit" 
                     type="submit">
             <!-- <div class="wpcf7-response-output wpcf7-display-none"></div> -->
         </form>

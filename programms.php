@@ -9,7 +9,7 @@
 <!-- //programs and shedule// -->
 
 <section class="programs_page wrapper margin-bottom">
-    <h1>Программы и расписания</h1>
+    <h1><?php echo get_the_title() ?></h1>
             <?php
             global $post;
             $args = array('posts_per_page' => 10,'post_type' => 'html5-levels', 'order' => 'ASC' );

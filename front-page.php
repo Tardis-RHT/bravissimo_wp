@@ -1,12 +1,18 @@
 <?php get_header(); ?>
 
 	<main role="main">
+    <?php 
+    require 'lang.php';
+    LangDicts::$dict = LangDicts::$rus;
+    if(get_locale() == 'ru_RU') LangDicts::$dict = LangDicts::$rus;
+    elseif(get_locale() == 'uk') LangDicts::$dict = LangDicts::$ukr;
+    ?>
 <!-- //italian picture// -->
 
 <section class="bg_wrapper margin-bottom">
     <div class="section_first-img">
         <h1 class="section1_italy"><?php echo get_post_meta( $post->ID, 'main_title', true ); ?></h1>
-        <button class="button popup">записаться</button>
+        <button class="button popup"><?php echo LangDicts::$dict['submit']; ?></button>
     </div>
 
     <!-- MODAL WINDOW -->
@@ -48,20 +54,18 @@
 
         </div>
         <div class="thankyou modal_hidden">
-            <h2>Спасибо!</h2>
-            <p class="thankyou_p">Ваша заявка принята.</p>
-            <p class="thankyou_p">Мы с Вами свяжемся в ближайшее время!</p>
+            <h2><?php echo LangDicts::$dict['thankyou']; ?>!</h2>
+            <p class="thankyou_p"><?php echo LangDicts::$dict['accepted_txt']; ?>.</p>
+            <p class="thankyou_p"><?php echo LangDicts::$dict['connect_txt']; ?>!</p>
             <button class="thankyou_btn" name="button" value="OK" type="button">OK</button>
         </div>
     </div>
 <div id="overlay"></div>
   <!-- END OF MODAL WINDOW -->
 </section>
-
 <!-- //end of italian picture// -->
+
 <!-- //test & skype// -->
-
-
 <section class="wrapper margin-bottom">
     <div class="tech_wrapper">
         <a href="/italian-test" class="tech">
@@ -78,7 +82,7 @@
 
 <!-- //programs section// -->
 <section class="wrapper margin-bottom">
-    <h2 class="programs_h2">Программы</h2>
+    <h2 class="programs_h2"><?php echo LangDicts::$dict['programs']; ?></h2>
     <div class="programs_wrapper">
         <?php
         global $post;
@@ -114,31 +118,31 @@
     <div class="italian_wraper">
     <div class="italian_container">
         <div class="italian-for">
-            <h2 class="italian_p">Итальянский для...</h2>
+            <h2 class="italian_p"><?php echo LangDicts::$dict['ital_for_txt']; ?>...</h2>
             <div class="italian-logs">
                 <div class="italian_logo">
                     <img class="italian_logo-single" src="<?php echo get_template_directory_uri(); ?>/img/family.svg" alt="family">
-                    <p class="italian_icon-text">Семьи</p>
+                    <p class="italian_icon-text"><?php echo LangDicts::$dict['family']; ?></p>
                 </div>
                 <div class="italian_logo">
                     <img class="italian_logo-single" src="<?php echo get_template_directory_uri(); ?>/img/money.svg" alt="business">
-                    <p class="italian_icon-text">Бизнеса</p>
+                    <p class="italian_icon-text"><?php echo LangDicts::$dict['business']; ?></p>
                 </div>
                 <div class="italian_logo">
                     <img class="italian_logo-single" src="<?php echo get_template_directory_uri(); ?>/img/college-graduation.svg" alt="exam">
-                    <p class="italian_icon-text">Образования</p>
+                    <p class="italian_icon-text"><?php echo LangDicts::$dict['edu']; ?></p>
                 </div>
                 <div class="italian_logo">
                     <img class="italian_logo-single" src="<?php echo get_template_directory_uri(); ?>/img/airplane.svg" alt="travel">
-                    <p class="italian_icon-text">Путешествий</p>
+                    <p class="italian_icon-text"><?php echo LangDicts::$dict['travel']; ?></p>
                 </div>
                 <div class="italian_logo">
                     <img class="italian_logo-single" src="<?php echo get_template_directory_uri(); ?>/img/heart (1).svg" alt="relocation">
-                    <p class="italian_icon-text">Любви</p>
+                    <p class="italian_icon-text"><?php echo LangDicts::$dict['love']; ?></p>
                 </div>
                 <div class="italian_logo">
                     <img class="italian_logo-single" src="<?php echo get_template_directory_uri(); ?>/img/roman-coliseum.svg" alt="professionals">
-                    <p class="italian_icon-text">Культуры</p>
+                    <p class="italian_icon-text"><?php echo LangDicts::$dict['culture']; ?></p>
                 </div>
             </div>  
         </div>
@@ -149,7 +153,7 @@
 
 <!-- //education types// -->
 <section class="education-types wrapper">
-    <h2 class="education-types-title">Мы предлагаем</h2>
+    <h2 class="education-types-title"><?php echo LangDicts::$dict['we_offer']; ?></h2>
     <div class="education-types-container">
         <div class="education-types_flex">
          <?php
@@ -181,32 +185,32 @@
 <!-- //section flags// -->
 <section class="margin-bottom">
     <div class="section_wrapper-flag">
-        <h2>Италоговорящие страны</h2>
+        <h2><?php echo LangDicts::$dict['talk_ital']; ?></h2>
         <div class="wrapper">
             <div class="flags_wrapper">
                 <div class="flag_wrpapper">
                     <img class="section-flag" src="<?php echo get_template_directory_uri(); ?>/img/italy.svg">
-                    <span>Италия</span>
+                    <span><?php echo LangDicts::$dict['italy']; ?></span>
                 </div>
                 <div class="flag_wrpapper">
                     <img class="section-flag" src="<?php echo get_template_directory_uri(); ?>/img/vatican-city.svg">
-                    <span>Ватикан</span>
+                    <span><?php echo LangDicts::$dict['vatican']; ?></span>
                 </div>
                 <div class="flag_wrpapper">
                     <img class="section-flag" src="<?php echo get_template_directory_uri(); ?>/img/san-marino.svg">
-                    <span>Сан-Марино</span>
+                    <span><?php echo LangDicts::$dict['san-marino']; ?></span>
                 </div>
                 <div class="flag_wrpapper">
                     <img class="section-flag" src="<?php echo get_template_directory_uri(); ?>/img/switzerland.svg">
-                    <span>Швейцария</span>
+                    <span><?php echo LangDicts::$dict['switzerland']; ?></span>
                 </div>
                 <div class="flag_wrpapper">
                     <img class="section-flag" src="<?php echo get_template_directory_uri(); ?>/img/slovenia.svg">
-                    <span>Словения</span>
+                    <span><?php echo LangDicts::$dict['slovenia']; ?></span>
                 </div>
                 <div class="flag_wrpapper">
                     <img class="section-flag" src="<?php echo get_template_directory_uri(); ?>/img/croatia.svg">
-                    <span>Хорватия</span>
+                    <span><?php echo LangDicts::$dict['croatia']; ?></span>
                 </div>
             </div>
         </div>
@@ -216,11 +220,11 @@
 
 <!-- //learning section// -->
 <section>
-        <h2 class="learning_h2">Изучать итальянский...</h2>
+        <h2 class="learning_h2"><?php echo LangDicts::$dict['learning_ital']; ?>...</h2>
         <div class="learning_wrapper-big_right">
             <div class="learning_wrapper-small_01">
                 <div class="learning_text_left">
-                <h3 class="learning_h3">...легко</h3>
+                <h3 class="learning_h3">...<?php echo LangDicts::$dict['easy']; ?></h3>
                 <p><?php echo get_post_meta( $post->ID, 'easy', true ); ?></p>
                 </div>
             </div>
@@ -228,7 +232,7 @@
         <div class="learning_wrapper-big_left">
             <div class="learning_wrapper-small_02">
                 <div class="learning_text_right">
-                    <h3 class="learning_h3">...сложно</h3>
+                    <h3 class="learning_h3">...<?php echo LangDicts::$dict['hard']; ?></h3>
                     <p><?php echo get_post_meta( $post->ID, 'hard', true ); ?></p>
                 </div>
             </div>
@@ -239,8 +243,8 @@
 <!-- //beautiful picture at bottom// -->
 <section class="bg_wrapper">
     <div class="sectionlust">
-        <h3 class="sectionlust_text">Готов учить итальянский?</h3>
-        <button class="sectionlust_button popup">записаться</button>
+        <h3 class="sectionlust_text"><?php echo LangDicts::$dict['ready_to_learn_txt']; ?></h3>
+        <button class="sectionlust_button popup"><?php echo LangDicts::$dict['submit']; ?></button>
     </div>
 </section>
 <!-- //end of beautiful picture at bottom// -->

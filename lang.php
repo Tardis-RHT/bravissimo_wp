@@ -41,7 +41,14 @@
             'hard' => 'сложно',
 
             // Bottom of the main page
-            'ready_to_learn_txt' => 'Готов учить итальянский?'
+            'ready_to_learn_txt' => 'Готов учить итальянский?',
+
+            // Page AboutUs
+            'why_us_txt' => 'Почему мы?',
+            'edu_method_txt' => 'Эффективная методика обучения',
+            'internship_txt' => 'Стажировка для лучших студентов',
+            'pro_teachers_txt' => 'Преподаватели высшего уровня',
+            'our_teachers_txt' => 'Наши учителя',
                                 );   
         public static $ukr = array(
             // Buttons
@@ -84,7 +91,14 @@
             'hard' => 'важко',
 
             // Bottom of the main page
-            'ready_to_learn_txt' => 'Готовий вчити італійську?'
+            'ready_to_learn_txt' => 'Готовий вчити італійську?',
+
+            // Page AboutUs
+            'why_us_txt' => 'Чому ми?',
+            'edu_method_txt' => 'Ефективна методика навчання',
+            'internship_txt' => 'Стажування для кращих студентів',
+            'pro_teachers_txt' => 'Викладачі вищого рівня',
+            'our_teachers_txt' => 'Наші вчителі',
         );                              
         public static $dict; // текущий словарь
     }

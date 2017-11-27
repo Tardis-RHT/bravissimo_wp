@@ -1854,6 +1854,7 @@ label {
 }
 
 .library_button-download {
+  margin: 10px 0;
   width: auto;
   display: inline-block;
 }

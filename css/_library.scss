@@ -28,6 +28,7 @@
   }
 }
 .library_button-download {
+  margin: 10px 0;
   @extend %btn;
   @extend %btn_red;
   width: auto;

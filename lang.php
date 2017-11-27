@@ -19,9 +19,8 @@
             'accepted_txt' => 'Ваша заявка принята',
             'connect_txt' => 'Мы с Вами свяжемся в ближайшее время',
 
-            // Section and page Programs
+            // Section Programs
             'programs' => 'Программы',
-            'programs_and' => 'Программы и расписания',
 
             // Section ItalianFor
             'ital_for_txt' => 'Итальянский для',
@@ -61,7 +60,7 @@
                         
             // Page Contacts
             'contact_us' => 'Свяжитесь с нами',
-                                );   
+        );   
         public static $ukr = array(
             // Buttons
             'submit' => 'Записатися',

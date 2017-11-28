@@ -184,7 +184,7 @@
             $myposts = get_posts( $args );
             foreach( $myposts as $post ){ setup_postdata($post);
                 ?>
-            <a class="news_single" href="#">
+            <a class="news_single" href="<?php the_permalink(); ?>">
                 <img class="news-single_img" src="<?php echo get_the_post_thumbnail_url();?>" alt="">
                 <div class="news-single_about">
                     <p class="news-single_date"><?php echo get_the_date('n.j.Y'); ?></p>

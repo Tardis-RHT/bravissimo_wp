@@ -40,6 +40,16 @@
 .news_content{
     text-align: left;
 }
+.news-title_img{
+    width: auto;
+}
+.content{
+    text-align: left;
+    p{
+        margin: 5px 0;
+        line-height: 24px;
+    }
+}
 @media (min-width: 1200px){
     .news_wrapper{
         justify-content: space-between;

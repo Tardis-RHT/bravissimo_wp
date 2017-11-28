@@ -558,7 +558,7 @@ function create_post_type_news()
 {
     register_taxonomy_for_object_type('category', 'html5-blank'); // Register Taxonomies for Category
     register_taxonomy_for_object_type('post_tag', 'html5-blank');
-    register_post_type('html5-news', // Register Custom Post Type
+    register_post_type('news', // Register Custom Post Type
         array(
         'labels' => array(
             'name' => __('Новости', 'html5blank'), // Rename these to suit

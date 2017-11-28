@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: single-html5-news
+Template Name: single-news
 */
 ?>
 <?php get_header(); ?>

@@ -180,7 +180,7 @@
     <div class="news_wrapper">
         <?php
             global $post;
-            $args = array('posts_per_page' => 3,'post_type' => 'html5-news', 'order' => 'DESC' );
+            $args = array('posts_per_page' => 3,'post_type' => 'news', 'order' => 'DESC' );
             $myposts = get_posts( $args );
             foreach( $myposts as $post ){ setup_postdata($post);
                 ?>

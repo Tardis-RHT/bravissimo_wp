@@ -58,7 +58,7 @@
 <!-- //end of italian picture// -->
 
 <!-- //test & skype// -->
-<section class="wrapper margin-bottom">
+<section class="wrapper">
     <div class="tech_wrapper">
         <a href="/italian-test" class="tech">
             <img class="tech_img" src="<?php echo get_template_directory_uri(); ?>/img/writing.svg">
@@ -144,7 +144,7 @@
 <!-- //end of italian for// -->
 
 <!-- //education types// -->
-<section class="education-types wrapper">
+<section class="education-types wrapper margin-bottom">
     <h2 class="education-types-title"><?php echo LangDicts::$dict['we_offer']; ?></h2>
     <div class="education-types-container">
         <div class="education-types_flex">
@@ -173,6 +173,54 @@
     </div>
 </section>
 <!-- //end of education types// -->
+
+<!-- //section news// -->
+<section class="wrapper margin-bottom">
+    <h2>Новости</h2>
+    <div class="news_wrapper">
+        <?php
+            global $post;
+            $args = array('posts_per_page' => 3,'post_type' => 'html5-news', 'order' => 'DESC' );
+            $myposts = get_posts( $args );
+            foreach( $myposts as $post ){ setup_postdata($post);
+                ?>
+            <a class="news_single" href="#">
+                <img class="news-single_img" src="<?php echo get_the_post_thumbnail_url();?>" alt="">
+                <div class="news-single_about">
+                    <p class="news-single_date"><?php echo get_the_date('n.j.Y'); ?></p>
+                    <h3 class="news_title"><?php the_title(); ?></h3>
+                    <p class="news_content"><?php echo wp_trim_words( get_the_content()); ?></p>
+                </div>
+            </a>
+        <?php
+            }
+            wp_reset_postdata();
+        ?>
+    </div>
+</section>
+<!-- //end of section news// -->
+
+<!-- //learning section// -->
+<section>
+        <h2 class="learning_h2"><?php echo LangDicts::$dict['learning_ital']; ?>...</h2>
+        <div class="learning_wrapper-big_right">
+            <div class="learning_wrapper-small_01">
+                <div class="learning_text_left">
+                <h3 class="learning_h3">...<?php echo LangDicts::$dict['easy']; ?></h3>
+                <p><?php echo get_post_meta( $post->ID, 'easy', true ); ?></p>
+                </div>
+            </div>
+        </div>
+        <div class="learning_wrapper-big_left">
+            <div class="learning_wrapper-small_02">
+                <div class="learning_text_right">
+                    <h3 class="learning_h3">...<?php echo LangDicts::$dict['hard']; ?></h3>
+                    <p><?php echo get_post_meta( $post->ID, 'hard', true ); ?></p>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- //end of learning section// -->
 
 <!-- //section flags// -->
 <section class="margin-bottom">
@@ -210,27 +258,7 @@
 </section>
 <!-- //end of section flags// -->
 
-<!-- //learning section// -->
-<section>
-        <h2 class="learning_h2"><?php echo LangDicts::$dict['learning_ital']; ?>...</h2>
-        <div class="learning_wrapper-big_right">
-            <div class="learning_wrapper-small_01">
-                <div class="learning_text_left">
-                <h3 class="learning_h3">...<?php echo LangDicts::$dict['easy']; ?></h3>
-                <p><?php echo get_post_meta( $post->ID, 'easy', true ); ?></p>
-                </div>
-            </div>
-        </div>
-        <div class="learning_wrapper-big_left">
-            <div class="learning_wrapper-small_02">
-                <div class="learning_text_right">
-                    <h3 class="learning_h3">...<?php echo LangDicts::$dict['hard']; ?></h3>
-                    <p><?php echo get_post_meta( $post->ID, 'hard', true ); ?></p>
-                </div>
-            </div>
-        </div>
-    </section>
-<!-- //end of learning section// -->
+
 
 <!-- //beautiful picture at bottom// -->
 <section class="bg_wrapper">

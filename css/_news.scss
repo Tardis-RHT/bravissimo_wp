@@ -3,6 +3,11 @@
     justify-content: center;
     flex-wrap: wrap;
 }
+.page-news_wrapper{
+    @include flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 .news_single{
     display: block;
     margin: 0 10px 30px;

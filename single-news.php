@@ -11,6 +11,5 @@ Template Name: single-news
     <div class="content  margin-bottom">
         <?php the_post(); the_content(); ?>
     </div>
-    
 </section>
 <?php get_footer(); ?>

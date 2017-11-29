@@ -7,7 +7,7 @@
 <main role="main">
     <section class="wrapper margin-bottom">
         <h1><?php echo get_the_title($page->ID) ?></h1>
-        <div class="news_wrapper">
+        <div class="page-news_wrapper">
             <?php
                 global $post;
                 $args = array('posts_per_page' => 0,'post_type' => 'news', 'order' => 'DESC' );

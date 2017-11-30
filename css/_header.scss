@@ -278,6 +278,9 @@
 	color: $red;
 }
 @media (min-width:550px){
+	.header{
+		padding-bottom: 125px;
+	}
 	.menu-item{
 		box-sizing: border-box;
 		padding: 5px;

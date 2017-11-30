@@ -111,6 +111,9 @@
 .bg_wrapper{
 	max-width: 1600px;
 	margin: 0 auto;
+	@media (min-width: 769px){
+		margin: 140px auto 0;
+		}
 }
 
 .tech_wrapper{
@@ -145,3 +148,5 @@
 		margin-top: -100px;		
 	}
 }
+
+

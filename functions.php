@@ -409,6 +409,7 @@ function create_post_type_levels()
     register_taxonomy_for_object_type('post_tag', 'levels');
     register_post_type('html5-levels', // Register Custom Post Type
         array(
+        'menu_icon' => 'dashicons-clipboard',
         'labels' => array(
             'name' => __('Программы и расписания', 'levels'), // Rename these to suit
             'singular_name' => __('HTML5 Blank Custom Post', 'levels'),
@@ -447,6 +448,7 @@ function create_post_type_offers()
     register_taxonomy_for_object_type('post_tag', 'html5-blank');
     register_post_type('html5-offers', // Register Custom Post Type
         array(
+        'menu_icon' => 'dashicons-lightbulb',
         'labels' => array(
             'name' => __('Мы предлагаем', 'offers'), // Rename these to suit
             'singular_name' => __('HTML5 Blank Custom Post', 'offers'),
@@ -484,6 +486,7 @@ function create_post_type_teachers()
     register_taxonomy_for_object_type('post_tag', 'html5-blank');
     register_post_type('html5-teachers', // Register Custom Post Type
         array(
+        'menu_icon' => 'dashicons-businessman',
         'labels' => array(
             'name' => __('Наши учителя', 'html5blank'), // Rename these to suit
             'singular_name' => __('HTML5 Blank Custom Post', 'html5blank'),
@@ -523,6 +526,7 @@ function create_post_type_library()
     register_taxonomy_for_object_type('post_tag', 'html5-blank');
     register_post_type('library', // Register Custom Post Type
         array(
+            'menu_icon' => 'dashicons-book',
             'labels' => array(
                 'name' => __('Библиотека', 'html5blank'), // Rename these to suit
                 'singular_name' => __('Library', 'html5blank'),
@@ -560,8 +564,9 @@ function create_post_type_news()
     register_taxonomy_for_object_type('post_tag', 'html5-blank');
     register_post_type('news', // Register Custom Post Type
         array(
+        'menu_icon' => 'dashicons-megaphone',
         'labels' => array(
-            'name' => __('Новости', 'html5blank'), // Rename these to suit
+            'name' => __('Новости', 'html5blank'), // Rename these to suit            
             'singular_name' => __('HTML5 Blank Custom Post', 'html5blank'),
             'add_new' => __('Add New', 'html5blank'),
             'add_new_item' => __('Add New HTML5 Blank Custom Post', 'html5blank'),

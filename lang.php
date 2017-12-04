@@ -89,9 +89,9 @@
             'ital_for_txt' => 'Італійська для',
             'family' => "Сім'ї",
             'business' => 'Бізнесу',
-            'edu' => 'Освіти',
+            'edu' => 'Навчання',
             'travel' => 'Подорожей',
-            'love' => 'Любові',
+            'love' => 'Кохання',
             'culture' => 'Культури',
 
             // Section WeOffer
@@ -107,12 +107,12 @@
             'croatia' => 'Хорватія',
 
             // Section LearningItalian
-            'learning_ital' => 'Вчити італійську',
+            'learning_ital' => 'Вивчати італійську',
             'easy' => 'легко',
-            'hard' => 'важко',
+            'hard' => 'складно',
 
             // Bottom of the main page
-            'ready_to_learn_txt' => 'Готовий вчити італійську?',
+            'ready_to_learn_txt' => 'Готовий вивчати італійську?',
 
             // Page AboutUs
             'why_us_txt' => 'Чому ми?',

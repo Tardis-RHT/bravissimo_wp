@@ -589,16 +589,19 @@ label {
   flex-wrap: wrap;
 }
 
-.contact_content :hover {
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
-}
-
 .contact_address, .contact_tell, .contact_time, .contact_email {
   text-align: center;
   padding: 10px;
   margin: 0 auto;
+}
+
+.contact_address:hover, .contact_tell:hover, .contact_email:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  -webkit-transition: all .4s ease;
+  -moz-transition: all .4s ease;
+  transition: all .4s ease;
 }
 
 .contact_logo {

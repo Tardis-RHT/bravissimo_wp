@@ -34,6 +34,9 @@
             // Section WeOffer
             'we_offer' => 'Мы предлагаем',
 
+            // Section and Page News
+            'news' => 'Новости',
+
             // Section Countries
             'talk_ital' => 'Италоговорящие страны',
             'italy' => 'Италия',
@@ -96,6 +99,9 @@
 
             // Section WeOffer
             'we_offer' => 'Ми пропонуємо',
+
+            // Section and Page News
+            'news' => 'Новини',
 
             // Section Countries
             'talk_ital' => 'Італомовні країни',

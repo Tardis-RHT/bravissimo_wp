@@ -176,7 +176,7 @@
 
 <!-- //section news// -->
 <section class="wrapper margin-bottom">
-    <h2>Новости</h2>
+    <h2><?php echo LangDicts::$dict['news']; ?></h2>
     <div class="news_wrapper">
         <?php
             global $post;

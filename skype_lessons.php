@@ -61,7 +61,7 @@
                         <input name="skype" value="" size="40" class="wpcf7-form-control wpcf7-text skype-lessons_form-skype" 
                             aria-invalid="false" type="text" placeholder="Skype">
                     <span class="wpcf7-form-control-wrap skype"></span>    
-                        <input value="Записаться" class="wpcf7-form-control wpcf7-submit" type="submit">
+                        <input value="<?php echo LangDicts::$dict['submit']; ?>" class="wpcf7-form-control wpcf7-submit" type="submit">
 
                     <div class="wpcf7-response-output wpcf7-display-none"></div></form></div>
                 </div>

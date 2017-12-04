@@ -63,6 +63,11 @@
                         
             // Page Contacts
             'contact_us' => 'Свяжитесь с нами',
+
+            // Page SkypeLessons
+            'ital_online' => 'Итальянский online',
+            'remote_learning' => 'Дистанционное обучение',
+            'testing_lesson_txt' => 'Запишитесь на пробное занятие',
         );   
         public static $ukr = array(
             // Buttons
@@ -125,10 +130,15 @@
             'edu_method_txt' => 'Ефективна методика навчання',
             'internship_txt' => 'Стажування для кращих студентів',
             'pro_teachers_txt' => 'Викладачі вищого рівня',
-            'our_teachers_txt' => 'Наші вчителі',
+            'our_teachers_txt' => 'Наші викладачi',
             
             // Page Contacts
             'contact_us' => "Зв'яжіться з нами",
+
+            // Page SkypeLessons
+            'ital_online' => 'Італійська online',
+            'remote_learning' => 'Дистанційне навчання',
+            'testing_lesson_txt' => 'Запишіться на пробне заняття',
         );                              
         public static $dict; // текущий словарь
     }

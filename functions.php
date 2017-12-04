@@ -61,6 +61,26 @@ if (function_exists('add_theme_support'))
 /*------------------------------------*\
 	Functions
 \*------------------------------------*/
+// Changing the logo on the Login Page
+function my_login_logo() { ?>
+    <style type="text/css">
+        #login h1 a, .login h1 a {
+        background-image: url("<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png");
+		height:65px;
+		width:320px;
+		background-size: contain;
+		background-repeat: no-repeat;
+        	padding-bottom: 30px;
+        }
+    </style>
+<?php }
+// Changing the link on the Login Page
+function my_login_logo_url() {
+    return home_url();
+}
+function my_login_logo_url_title() {
+    return 'Studio Bravissimo. Курсы итальянского языка в Киеве.';
+}
 
 // HTML5 Blank navigation
 function html5blank_nav()
@@ -360,6 +380,8 @@ add_action( 'admin_enqueue_scripts', 'load_admin_style' );
 function load_admin_style() {
     wp_enqueue_style( 'admin_css', get_template_directory_uri().'/css/admin-style.css', false, '1.0.0' );
 }
+// Changing the logo on the Login Page
+add_action( 'login_enqueue_scripts', 'my_login_logo' );
 
 // Remove Actions
 remove_action('wp_head', 'feed_links_extra', 3); // Display the links to the extra feeds such as category feeds
@@ -392,6 +414,9 @@ add_filter('excerpt_more', 'html5_blank_view_article'); // Add 'View Article' bu
 add_filter('style_loader_tag', 'html5_style_remove'); // Remove 'text/css' from enqueued stylesheet
 add_filter('post_thumbnail_html', 'remove_thumbnail_dimensions', 10); // Remove width and height dynamic attributes to thumbnails
 add_filter('image_send_to_editor', 'remove_thumbnail_dimensions', 10); // Remove width and height dynamic attributes to post images
+// Changing the link on the Login Page
+add_filter( 'login_headerurl', 'my_login_logo_url' );
+add_filter( 'login_headertitle', 'my_login_logo_url_title' );
 
 // Remove Filters
 remove_filter('the_excerpt', 'wpautop'); // Remove <p> tags from Excerpt altogether

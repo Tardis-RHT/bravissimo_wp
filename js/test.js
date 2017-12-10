@@ -311,33 +311,23 @@
 					levelArray[0] = new Array();
 			levelArray[0]['lower'] = 0;
 			levelArray[0]['upper'] = 5;
-			levelArray[0]['case'] = `Ваш примерный уровень: Элементарный - А1<br />
-Вам нужно ещё поработать!<br />
-Мы можем помочь вам перейти на следующий уровень!`;
+			levelArray[0]['case'] = level + lvl1 + ' - А1<br />' + rslt1 + '<br />' + results_txt3;
 					levelArray[1] = new Array();
 			levelArray[1]['lower'] = 6;
 			levelArray[1]['upper'] = 13;
-			levelArray[1]['case'] = `Ваш примерный уровень: Ниже среднего - А2<br />
-Вам нужно ещё поработать!<br />
-Мы можем помочь вам перейти на следующий уровень!`;
+			levelArray[1]['case'] = level + lvl2 + ' - А2<br />' + rslt1 + '<br />' + results_txt3;
 					levelArray[2] = new Array();
 			levelArray[2]['lower'] = 14;
 			levelArray[2]['upper'] = 18;
-			levelArray[2]['case'] = `Ваш примерный уровень: Промежуточный - А2-В1<br />
-Не плохо!<br />
-Мы можем помочь вам перейти на следующий уровень!`;
+			levelArray[2]['case'] = level + lvl3 + ' - А2-В1<br />' + rslt2 + '<br />' + results_txt3;
 					levelArray[3] = new Array();
 			levelArray[3]['lower'] = 19;
 			levelArray[3]['upper'] = 24;
-			levelArray[3]['case'] = `Ваш примерный уровень: Выше среднего - В1<br />
-Не плохо!<br />
-Мы можем помочь вам перейти на следующий уровень!`;
+			levelArray[3]['case'] = level + lvl4 + ' - В1<br />' + rslt2 + '<br />' + results_txt3;
 					levelArray[4] = new Array();
 			levelArray[4]['lower'] = 25;
 			levelArray[4]['upper'] = 30;
-			levelArray[4]['case'] = `Ваш примерный уровень: Продвинутый - С1<br />
-Отличная работа!<br />
-Мы можем помочь вам перейти на следующий уровень!`;
+			levelArray[4]['case'] = level + lvl5 + ' - С1<br />' + rslt3 + '<br />' + results_txt3;
 			}
 
 	/**
@@ -345,7 +335,7 @@
 	 */
 	function displayQuestion()
 	{
-		questionTitle.innerHTML = 'Вопрос ' + (questionNumber + 1) + ' / ' + questionsArray.length;
+		questionTitle.innerHTML = question + (questionNumber + 1) + ' / ' + questionsArray.length;
 
 		questionSplit = questionsArray[questionNumber][0].split('<br />');
 		if (questionSplit.length > 1) {
@@ -399,7 +389,7 @@
 	 */
 	function buttonStart_onclick()
 	{
-		questionButton.innerHTML = '<input type="button" class="test-page_form_button-answer" name="buttonAnswer" id="buttonAnswer" value="Следующий вопрос" onclick="return buttonAnswer_onclick()"/>';
+		questionButton.innerHTML = '<input type="button" class="test-page_form_button-answer" name="buttonAnswer" id="buttonAnswer" value="' + next_question + '" onclick="return buttonAnswer_onclick()"/>';
 		displayQuestion();
 	}
 
@@ -413,7 +403,7 @@
 			questionNumber++;
 			displayQuestion();
 		} else {
-			questionTitle.innerHTML = 'Результаты и ответы на тест';
+			questionTitle.innerHTML = results;
 
 			for (var i=0; i < levelArray.length; i++) {
 				if (correctAnswers >= levelArray[i]['lower'] && correctAnswers <= levelArray[i]['upper']) {
@@ -423,7 +413,7 @@
 			}
 
 			// Format response lolz
-			var responseLabel = 'Вы ответили правильно на :correct вопросов из :total!';
+			var responseLabel = results_txt1 + ':correct' + results_txt2 + ':total!';
 			responseLabel = responseLabel.replace(/:correct/, correctAnswers);
 			responseLabel = responseLabel.replace(/:total/, answersArray.length);
 			questionDefinition.innerHTML = responseLabel;
@@ -434,7 +424,7 @@
 
 			for (answerCounter=0; answerCounter < answersArray.length; answerCounter++) {
 				var myclass = mistakesArray[answerCounter] ? 'icon-error':'icon-success';
-				answersText = answersText + '<p><i class="' + myclass + '"></i> <strong class="test_question-strong">Вопрос ' + (answerCounter+1) + ': </strong> <br>' + questionsArray[answerCounter][0] + '<br><span>Ответ: </span>' + questionsArray[answerCounter][answersArray[answerCounter]] + '</p>';
+				answersText = answersText + '<p><i class="' + myclass + '"></i> <strong class="test_question-strong">' + question + (answerCounter+1) + ': </strong> <br>' + questionsArray[answerCounter][0] + '<br><span>' + answer + '</span>' + questionsArray[answerCounter][answersArray[answerCounter]] + '</p>';
 			}
 
 			questionOptions.innerHTML = answersText;

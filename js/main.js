@@ -48,8 +48,15 @@ $(document).ready(function() {
   });
 });
 
-$('.button_submit').click(function(){
-  $('.thankyou').removeClass('modal_hidden');
-});
+//old way to show thankyou
+// $('.button_submit').click(function(){
+//   $('.thankyou').removeClass('modal_hidden');
+// });
 
+//new way to show thankyou
+var wpcf7Elm = document.querySelector( '#modal_form > .wpcf7' );
+wpcf7Elm.addEventListener( 'wpcf7mailsent', function( event ) {
+   $('.thankyou').removeClass('modal_hidden');
+}, false );
 // END OF SCRIPT FOR MODAL WINDOW
+// 

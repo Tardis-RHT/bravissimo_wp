@@ -120,7 +120,7 @@ button, input[type="submit"], input[type="button"], .library_button-download, .t
   font-family: "Open Sans", sans-serif;
   padding: 11px 38px;
   outline: none;
-  transition: background-color .3s, color .3s, border-color .3s;
+  transition: background-color .3s, color .3s, border-color .3s;
 }
 
 input[type="submit"], input[type="button"], .test-page_form-button,
@@ -2511,6 +2511,24 @@ strong {
   .thankyou {
     margin-left: -160px;
   }
+}
+
+.partners_img-container {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.partners-title-container {
+  margin: 0 auto;
+  position: absolute;
+  top: 35%;
+  width: 100%;
+}
+
+.partners-title {
+  color: white;
+  margin: 0 auto;
 }
  
 

@@ -120,7 +120,7 @@ button, input[type="submit"], input[type="button"], .library_button-download, .t
   font-family: "Open Sans", sans-serif;
   padding: 11px 38px;
   outline: none;
-  transition: background-color .3s, color .3s, border-color .3s;
+  transition: background-color .3s, color .3s, border-color .3s;
 }
 
 input[type="submit"], input[type="button"], .test-page_form-button,
@@ -1375,7 +1375,7 @@ label {
 }
 
 .scroll .header_hide {
-  margin-top: -40px;
+  margin-top: -43px;
 }
 
 .scroll .header_menu-wrapper {

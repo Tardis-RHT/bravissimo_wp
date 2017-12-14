@@ -8,10 +8,10 @@
 
 <section class="skype-lessons margin-bottom">
     <div class="wrapper">
-        <h1 class="skype-lessons_title">Итальянский online</h1>
+        <h1 class="skype-lessons_title"><?php echo LangDicts::$dict['ital_online']; ?></h1>
         <div class="skype-lessons_description-container">
             <div class="skype-lessons_description">
-                <h4>Дистанционное обучение</h4>
+                <h4><?php echo LangDicts::$dict['remote_learning']; ?></h4>
                 <?php if (have_posts()): while (have_posts()) : the_post(); ?>
                 <?php the_content(); ?>
                 <div class="skype-lessons_main-info">
@@ -42,26 +42,26 @@
                         <input name="_wpcf7_container_post" value="0" type="hidden">
                         <input name="_wpcf7_nonce" value="4f1add3592" type="hidden">
                     </div>
-                    <legend class="skype-lessons_form-title">Запишитесь на пробное занятие</legend>
+                    <legend class="skype-lessons_form-title"><?php echo LangDicts::$dict['testing_lesson_txt']; ?></legend>
                     
                         <input name="your-name" value="" size="40" 
                             class="wpcf7-form-control wpcf7-text skype-lessons_form-name" 
-                            aria-required="true" aria-invalid="false" type="text" placeholder="Ваше имя">
+                            aria-required="true" aria-invalid="false" type="text" placeholder="<?php echo LangDicts::$dict['your_name']; ?>">
                     <span class="wpcf7-form-control-wrap your-name"></span>
                     
                         <input name="tel-851" value="" size="40" 
                             class="skype-lessons_form-tel wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel" 
-                            aria-required="true" aria-invalid="false" type="tel" placeholder="Телефон">
+                            aria-required="true" aria-invalid="false" type="tel" placeholder="<?php echo LangDicts::$dict['phone']; ?>">
                     <span class="wpcf7-form-control-wrap tel-851"></span>
                         
                         <input name="your-email" value="" size="40" class="skype-lessons_form-email wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-email" 
-                            aria-required="true" aria-invalid="false" type="email" placeholder="E-mail">
+                            aria-required="true" aria-invalid="false" type="email" placeholder="<?php echo LangDicts::$dict['email']; ?>">
                     <span class="wpcf7-form-control-wrap your-email"></span>    
                     
                         <input name="skype" value="" size="40" class="wpcf7-form-control wpcf7-text skype-lessons_form-skype" 
                             aria-invalid="false" type="text" placeholder="Skype">
                     <span class="wpcf7-form-control-wrap skype"></span>    
-                        <input value="Записаться" class="wpcf7-form-control wpcf7-submit" type="submit">
+                        <input value="<?php echo LangDicts::$dict['submit']; ?>" class="wpcf7-form-control wpcf7-submit" type="submit">
 
                     <div class="wpcf7-response-output wpcf7-display-none"></div></form></div>
                 </div>

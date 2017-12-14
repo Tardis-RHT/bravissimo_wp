@@ -61,6 +61,26 @@ if (function_exists('add_theme_support'))
 /*------------------------------------*\
 	Functions
 \*------------------------------------*/
+// Changing the logo on the Login Page
+function my_login_logo() { ?>
+    <style type="text/css">
+        #login h1 a, .login h1 a {
+        background-image: url("<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png");
+		height:65px;
+		width:320px;
+		background-size: contain;
+		background-repeat: no-repeat;
+        	padding-bottom: 30px;
+        }
+    </style>
+<?php }
+// Changing the link on the Login Page
+function my_login_logo_url() {
+    return home_url();
+}
+function my_login_logo_url_title() {
+    return 'Studio Bravissimo. Курсы итальянского языка в Киеве.';
+}
 
 // HTML5 Blank navigation
 function html5blank_nav()
@@ -88,39 +108,39 @@ function html5blank_nav()
 }
 
 // Load HTML5 Blank scripts (header.php)
-// function html5blank_header_scripts()
-// {
-//     if ($GLOBALS['pagenow'] != 'wp-login.php' && !is_admin()) {
+function html5blank_header_scripts()
+{
+    if ($GLOBALS['pagenow'] != 'wp-login.php' && !is_admin()) {
 
-//     	wp_register_script('conditionizr', get_template_directory_uri() . '/js/lib/conditionizr-4.3.0.min.js', array(), '4.3.0'); // Conditionizr
-//         wp_enqueue_script('conditionizr'); // Enqueue it!
+    	// wp_register_script('conditionizr', get_template_directory_uri() . '/js/lib/conditionizr-4.3.0.min.js', array(), '4.3.0'); // Conditionizr
+        // wp_enqueue_script('conditionizr'); // Enqueue it!
 
-//         wp_register_script('modernizr', get_template_directory_uri() . '/js/lib/modernizr-2.7.1.min.js', array(), '2.7.1'); // Modernizr
-//         wp_enqueue_script('modernizr'); // Enqueue it!
+        // wp_register_script('modernizr', get_template_directory_uri() . '/js/lib/modernizr-2.7.1.min.js', array(), '2.7.1'); // Modernizr
+        // wp_enqueue_script('modernizr'); // Enqueue it!
 
-//         wp_register_script('html5blankscripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0'); // Custom scripts
-//         wp_enqueue_script('html5blankscripts'); // Enqueue it!
-//     }
-// }
+        // wp_register_script('html5blankscripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0'); // Custom scripts
+        // wp_enqueue_script('html5blankscripts'); // Enqueue it!
+    }
+}
 
 // Load HTML5 Blank conditional scripts
-// function html5blank_conditional_scripts()
-// {
-//     if (is_page('pagenamehere')) {
-//         wp_register_script('scriptname', get_template_directory_uri() . '/js/scriptname.js', array('jquery'), '1.0.0'); // Conditional script(s)
-//         wp_enqueue_script('scriptname'); // Enqueue it!
-//     }
-// }
+function html5blank_conditional_scripts()
+{
+    if (is_page('pagenamehere')) {
+        wp_register_script('scriptname', get_template_directory_uri() . '/js/scriptname.js', array('jquery'), '1.0.0'); // Conditional script(s)
+        wp_enqueue_script('scriptname'); // Enqueue it!
+    }
+}
 
 // Load HTML5 Blank styles
-// function html5blank_styles()
-// {
-//     // wp_register_style('normalize', get_template_directory_uri() . '/normalize.css', array(), '1.0', 'all');
-//     // wp_enqueue_style('normalize'); // Enqueue it!
+function html5blank_styles()
+{
+    // wp_register_style('normalize', get_template_directory_uri() . '/normalize.css', array(), '1.0', 'all');
+    // wp_enqueue_style('normalize'); // Enqueue it!
 
-//     wp_register_style('html5blank', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
-//     wp_enqueue_style('html5blank'); // Enqueue it!
-// }
+    wp_register_style('html5blank', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
+    wp_enqueue_style('html5blank'); // Enqueue it!
+}
 
 // Register HTML5 Blank Navigation
 function register_html5_menu()
@@ -351,9 +371,17 @@ add_action('init', 'create_post_type_levels');
 add_action('init', 'create_post_type_offers');
 add_action('init', 'create_post_type_teachers');
 add_action('init', 'create_post_type_library');
+add_action('init', 'create_post_type_news');
 
 add_action('widgets_init', 'my_remove_recent_comments_style'); // Remove inline Recent Comment Styles from wp_head()
 add_action('init', 'html5wp_pagination'); // Add our HTML5 Pagination
+
+add_action( 'admin_enqueue_scripts', 'load_admin_style' );
+function load_admin_style() {
+    wp_enqueue_style( 'admin_css', get_template_directory_uri().'/css/admin-style.css', false, '1.0.0' );
+}
+// Changing the logo on the Login Page
+add_action( 'login_enqueue_scripts', 'my_login_logo' );
 
 // Remove Actions
 remove_action('wp_head', 'feed_links_extra', 3); // Display the links to the extra feeds such as category feeds
@@ -386,6 +414,9 @@ add_filter('excerpt_more', 'html5_blank_view_article'); // Add 'View Article' bu
 add_filter('style_loader_tag', 'html5_style_remove'); // Remove 'text/css' from enqueued stylesheet
 add_filter('post_thumbnail_html', 'remove_thumbnail_dimensions', 10); // Remove width and height dynamic attributes to thumbnails
 add_filter('image_send_to_editor', 'remove_thumbnail_dimensions', 10); // Remove width and height dynamic attributes to post images
+// Changing the link on the Login Page
+add_filter( 'login_headerurl', 'my_login_logo_url' );
+add_filter( 'login_headertitle', 'my_login_logo_url_title' );
 
 // Remove Filters
 remove_filter('the_excerpt', 'wpautop'); // Remove <p> tags from Excerpt altogether
@@ -408,6 +439,7 @@ function create_post_type_levels()
     register_taxonomy_for_object_type('post_tag', 'levels');
     register_post_type('html5-levels', // Register Custom Post Type
         array(
+        'menu_icon' => 'dashicons-clipboard',
         'labels' => array(
             'name' => __('Программы и расписания', 'levels'), // Rename these to suit
             'singular_name' => __('HTML5 Blank Custom Post', 'levels'),
@@ -446,6 +478,7 @@ function create_post_type_offers()
     register_taxonomy_for_object_type('post_tag', 'html5-blank');
     register_post_type('html5-offers', // Register Custom Post Type
         array(
+        'menu_icon' => 'dashicons-lightbulb',
         'labels' => array(
             'name' => __('Мы предлагаем', 'offers'), // Rename these to suit
             'singular_name' => __('HTML5 Blank Custom Post', 'offers'),
@@ -483,6 +516,7 @@ function create_post_type_teachers()
     register_taxonomy_for_object_type('post_tag', 'html5-blank');
     register_post_type('html5-teachers', // Register Custom Post Type
         array(
+        'menu_icon' => 'dashicons-businessman',
         'labels' => array(
             'name' => __('Наши учителя', 'html5blank'), // Rename these to suit
             'singular_name' => __('HTML5 Blank Custom Post', 'html5blank'),
@@ -522,6 +556,7 @@ function create_post_type_library()
     register_taxonomy_for_object_type('post_tag', 'html5-blank');
     register_post_type('library', // Register Custom Post Type
         array(
+            'menu_icon' => 'dashicons-book',
             'labels' => array(
                 'name' => __('Библиотека', 'html5blank'), // Rename these to suit
                 'singular_name' => __('Library', 'html5blank'),
@@ -553,7 +588,44 @@ function create_post_type_library()
             ) // Add Category and Post Tags support
         ));
 }
-
+function create_post_type_news()
+{
+    register_taxonomy_for_object_type('category', 'html5-blank'); // Register Taxonomies for Category
+    register_taxonomy_for_object_type('post_tag', 'html5-blank');
+    register_post_type('news', // Register Custom Post Type
+        array(
+        'menu_icon' => 'dashicons-megaphone',
+        'labels' => array(
+            'name' => __('Новости', 'html5blank'), // Rename these to suit            
+            'singular_name' => __('HTML5 Blank Custom Post', 'html5blank'),
+            'add_new' => __('Add New', 'html5blank'),
+            'add_new_item' => __('Add New HTML5 Blank Custom Post', 'html5blank'),
+            'edit' => __('Edit', 'html5blank'),
+            'edit_item' => __('Edit HTML5 Blank Custom Post', 'html5blank'),
+            'new_item' => __('New HTML5 Blank Custom Post', 'html5blank'),
+            'view' => __('View HTML5 Blank Custom Post', 'html5blank'),
+            'view_item' => __('View HTML5 Blank Custom Post', 'html5blank'),
+            'search_items' => __('Search HTML5 Blank Custom Post', 'html5blank'),
+            'not_found' => __('No HTML5 Blank Custom Posts found', 'html5blank'),
+            'not_found_in_trash' => __('No HTML5 Blank Custom Posts found in Trash', 'html5blank')
+        ),
+        'public' => true,
+        'hierarchical' => true, // Allows your posts to behave like Hierarchy Pages
+        'has_archive' => true,
+        'supports' => array(
+            'title',
+            'editor',
+            'excerpt',
+            'thumbnail',
+            'custom-fields'
+        ), // Go to Dashboard Custom HTML5 Blank post for supports
+        'can_export' => true, // Allows export in Tools > Export
+        'taxonomies' => array(
+            'post_tag',
+            'category'
+        ) // Add Category and Post Tags support
+    ));
+}
 /*------------------------------------*\
 	ShortCode Functions
 \*------------------------------------*/

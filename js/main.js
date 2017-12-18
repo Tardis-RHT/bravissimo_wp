@@ -3,7 +3,23 @@
 $('#button_menu').click(function(){
     $('.header_menu').slideToggle();
     $('.span_hamburger').toggleClass('active');
-})
+});
+
+//correcting hamburger when resized
+
+$(window).resize(function(){
+ if($(window).width() > 550){
+  $('.header_menu').css('display', 'flex');
+ }
+ else{
+   if ($('.span_hamburger').hasClass("active")){
+    $('.header_menu').css('display', 'flex');
+    }
+    else{
+      $('.header_menu').css('display', 'none');
+    }
+  }
+});
 
 //for diminishing header when scrolling
 $(window).scroll(function(){

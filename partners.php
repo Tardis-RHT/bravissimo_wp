@@ -23,6 +23,12 @@
             <a href="#" class="button">link</a>
         </div>
     </div>
+    <!-- <div>
+        <img src="<?php echo get_template_directory_uri() ?>/img/clients/001.jpg" alt="">
+        <img src="<?php echo get_template_directory_uri() ?>/img/clients/002.jpg" alt="">
+        <img src="<?php echo get_template_directory_uri() ?>/img/clients/003.jpg" alt="">
+        <img src="<?php echo get_template_directory_uri() ?>/img/clients/004.jpg" alt="">
+    </div> -->
 </section>
 </main>
 <?php get_footer(); ?>

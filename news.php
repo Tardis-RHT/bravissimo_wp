@@ -17,7 +17,7 @@
                 <a class="news_single" href="<?php the_permalink(); ?>">
                     <img class="news-single_img" src="<?php echo get_the_post_thumbnail_url();?>" alt="">
                     <div class="news-single_about">
-                        <p class="news-single_date"><?php echo get_the_date('n.j.Y'); ?></p>
+                        <p class="news-single_date"><?php echo get_the_date('j.n.Y'); ?></p>
                         <h3 class="news_title"><?php the_title(); ?></h3>
                         <p class="news_content"><?php echo wp_trim_words( get_the_content()); ?></p>
                     </div>

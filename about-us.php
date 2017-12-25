@@ -11,7 +11,7 @@
 <div class="about-us-bg">
     <h1><?php echo get_the_title($page->ID) ?></h1>
     <section class="why-us">
-        <h2 class="why-us_title"><?php echo LangDicts::$dict['why_us_txt']; ?></h2>
+        <h2 class="why-us_title h2"><?php echo LangDicts::$dict['why_us_txt']; ?></h2>
         <div class="benefits-container">
             <div class="benefits-methods">
                 <h3 class="benefits_title"><?php echo LangDicts::$dict['edu_method_txt']; ?></h3>
@@ -40,7 +40,7 @@
 <!-- //our teachers// -->
 <article>
     <section class="our-teachers">
-        <h2 class="our-teachers_title"><?php echo LangDicts::$dict['our_teachers_txt']; ?></h2>
+        <h2 class="our-teachers_title h2"><?php echo LangDicts::$dict['our_teachers_txt']; ?></h2>
         <div class="our-teachers-container">
               <?php
                     global $post;

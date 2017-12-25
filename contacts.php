@@ -47,7 +47,7 @@ get_header(); ?>
                     </div>
 
                 </div>
-                <h2 class="contact-info_p"><?php echo LangDicts::$dict['contact_us']; ?></h2>
+                <h2 class="contact-info_p h2"><?php echo LangDicts::$dict['contact_us']; ?></h2>
                 <div role="form" class="wpcf7" id="wpcf7-f200-o1" dir="ltr" style="" lang="en-US">
                     <form action="/contacts/#wpcf7-f200-o1" method="post"
                           class="wpcf7-form sent contacts_form contact-container"

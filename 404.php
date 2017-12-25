@@ -12,7 +12,7 @@
 					
 				</h3>
 				
-				<h2><a href="<?php echo home_url(); ?>"><?php _e( 'Вернуться на главную?', 'html5blank' ); ?></a></h2>
+				<h2 class="h2"><a href="<?php echo home_url(); ?>"><?php _e( 'Вернуться на главную?', 'html5blank' ); ?></a></h2>
 
 			</article>
 			<!-- /article -->

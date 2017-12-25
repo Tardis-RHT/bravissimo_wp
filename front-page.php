@@ -74,7 +74,7 @@
 
 <!-- //programs section// -->
 <section class="wrapper margin-bottom">
-    <h2 class="programs_h2"><?php echo LangDicts::$dict['programs']; ?></h2>
+    <h2 class="programs_h2 h2"><?php echo LangDicts::$dict['programs']; ?></h2>
     <div class="programs_wrapper">
         <?php
         global $post;
@@ -110,7 +110,7 @@
     <div class="italian_wraper">
     <div class="italian_container">
         <div class="italian-for">
-            <h2 class="italian_p"><?php echo LangDicts::$dict['ital_for_txt']; ?>...</h2>
+            <h2 class="italian_p h2"><?php echo LangDicts::$dict['ital_for_txt']; ?>...</h2>
             <div class="italian-logs">
                 <div class="italian_logo">
                     <img class="italian_logo-single" src="<?php echo get_template_directory_uri(); ?>/img/family.svg" alt="family">
@@ -145,7 +145,7 @@
 
 <!-- //education types// -->
 <section class="education-types wrapper margin-bottom">
-    <h2 class="education-types-title"><?php echo LangDicts::$dict['we_offer']; ?></h2>
+    <h2 class="education-types-title h2"><?php echo LangDicts::$dict['we_offer']; ?></h2>
     <div class="education-types-container">
         <div class="education-types_flex">
          <?php
@@ -176,7 +176,7 @@
 
 <!-- //section news// -->
 <section class="wrapper margin-bottom">
-    <h2><?php echo LangDicts::$dict['news']; ?></h2>
+    <h2 class="h2"><?php echo LangDicts::$dict['news']; ?></h2>
     <div class="news_wrapper">
         <?php
             global $post;
@@ -202,7 +202,7 @@
 
 <!-- //learning section// -->
 <section>
-        <h2 class="learning_h2"><?php echo LangDicts::$dict['learning_ital']; ?>...</h2>
+        <h2 class="learning_h2 h2"><?php echo LangDicts::$dict['learning_ital']; ?>...</h2>
         <div class="learning_wrapper-big_right">
             <div class="learning_wrapper-small_01">
                 <div class="learning_text_left">
@@ -225,7 +225,7 @@
 <!-- //section flags// -->
 <section class="margin-bottom">
     <div class="section_wrapper-flag">
-        <h2><?php echo LangDicts::$dict['talk_ital']; ?></h2>
+        <h2 class="h2"><?php echo LangDicts::$dict['talk_ital']; ?></h2>
         <div class="wrapper">
             <div class="flags_wrapper">
                 <div class="flag_wrpapper">

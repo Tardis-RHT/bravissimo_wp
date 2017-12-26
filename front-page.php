@@ -41,7 +41,7 @@
                         wpcf7-textarea" aria-invalid="false" placeholder="<?php echo LangDicts::$dict['comments']; ?>"></textarea>
                     <input value="<?php echo LangDicts::$dict['submit']; ?>" class="modal_submit wpcf7-form-control wpcf7-submit button_submit" 
                     type="submit">
-            <!-- <div class="wpcf7-response-output wpcf7-display-none"></div> -->
+            
         </form>
 
         </div>
@@ -83,7 +83,8 @@
         foreach( $myposts as $post ){ setup_postdata($post);
             ?>
         <?php echo '<a class="program-single" href="programs-and-schedules#programs_'.get_the_title().'">' ?>
-            <img class="program-single_img" src="<?php echo get_the_post_thumbnail_url();?>" alt="">
+            <img class="program-single_img" src="<?php echo get_the_post_thumbnail_url();?>" alt="<?php
+                echo get_post_meta(get_post_thumbnail_id( $post->ID ), '_wp_attachment_image_alt', true); ?>">
             <div class="program-single_about">
                 <?php if( $post->ID == 153) {
                     echo '<div class="program-single_circle_small">';}
@@ -187,7 +188,7 @@
             <a class="news_single" href="<?php the_permalink(); ?>">
                 <img class="news-single_img" src="<?php echo get_the_post_thumbnail_url();?>" alt="">
                 <div class="news-single_about">
-                    <p class="news-single_date"><?php echo get_the_date('n.j.Y'); ?></p>
+                    <p class="news-single_date"><?php echo get_the_date('j.n.Y'); ?></p>
                     <h3 class="news_title"><?php the_title(); ?></h3>
                     <p class="news_content"><?php echo wp_trim_words( get_the_content()); ?></p>
                 </div>

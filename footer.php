@@ -2,7 +2,7 @@
 <footer class="wraper footer">
     <div class="footer_content wrapper">
         <div class="footer_icons-wraper">
-            <a href="https://www.facebook.com/studiobravissimo/" target="blank" class="footer_facebook-icons"></a>
+            <a href="https://www.facebook.com/studiobravissimo/" target="_blank" class="footer_facebook-icons"></a>
             <a href="https://www.instagram.com/studiobravissimo/" target="_blank" class="footer_instagram-icons"></a>
         </div>
         <div class="footer_contacts">

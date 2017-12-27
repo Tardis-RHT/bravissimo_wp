@@ -18,7 +18,7 @@
 
 <?php
                 global $post;
-                $args = array('posts_per_page' => 0,'post_type' => 'clients', 'order' => 'DESC' );
+                $args = array('numberposts' => 0,'post_type' => 'clients', 'order' => 'DESC' );
                 $myposts = get_posts( $args );
                 foreach( $myposts as $post ){ setup_postdata($post);
                     ?>
@@ -26,7 +26,7 @@
             <div class="single-partner">
                 <img src="<?php echo get_the_post_thumbnail_url();?>" alt="partner1">
                 <div class="single-partner-info">
-                    <a href="<?php echo get_post_meta( $post->ID, 'link', true ); ?>" title="<?php the_title(); ?>" target="_blank">
+                    <a href="<?php echo get_post_meta( $post->ID, 'link', true ); ?>" title="<?php the_title(); ?>" target="_blank" rel="noindex, nofollow">
                         <h3 class="single-partner-name"><?php the_title(); ?></h3>
                     </a>
                     <h4 class="single-partner-job"><?php echo get_post_meta( $post->ID, 'job', true ); ?></h4>
@@ -52,7 +52,7 @@
                         $image = get_field('logo');
                         $url = $image['url'];
                         echo $url; 
-                    ?>" alt="<?php the_title(); ?>">
+                    ?>" alt="<?php the_title(); ?> logo">
             <?php
                 }
                 wp_reset_postdata();

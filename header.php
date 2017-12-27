@@ -2,7 +2,12 @@
 <html <?php language_attributes(); ?> class="no-js">
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
-   
+    <?php
+    if(is_404()){
+        echo "<title>Такой страницы нет | " . bloginfo("name") . "</title>";
+    }
+    ?>
+
     <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/img/logo1.png" type="image/x-icon">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">

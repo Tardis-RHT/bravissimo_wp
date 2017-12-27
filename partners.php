@@ -24,7 +24,14 @@
                     ?>
 
             <div class="single-partner">
-                <img src="<?php echo get_the_post_thumbnail_url();?>" alt="partner1">
+                <?php
+                    if( has_post_thumbnail() ) {
+                        echo '<img src="' .get_the_post_thumbnail_url().' " alt="Our client" />'; 
+                    }
+                    else {
+                        echo '<img src="'.get_template_directory_uri().'/img/italy-tips1.png" alt="Our client" />';
+                    }
+                ?>
                 <div class="single-partner-info">
                     <a href="<?php echo get_post_meta( $post->ID, 'link', true ); ?>" title="<?php the_title(); ?>" target="_blank" rel="noindex, nofollow">
                         <h3 class="single-partner-name"><?php the_title(); ?></h3>
@@ -58,28 +65,6 @@
                 wp_reset_postdata();
             ?>
     </div>
-    <!-- <div class="partners_logo-container">
-        <img src="<?php echo get_template_directory_uri() ?>/img/clients/001.jpg" alt="">
-        <img src="<?php echo get_template_directory_uri() ?>/img/clients/002.jpg" alt="">
-        <img src="<?php echo get_template_directory_uri() ?>/img/clients/003.jpg" alt="">
-        <img src="<?php echo get_template_directory_uri() ?>/img/clients/004.png" alt="">
-        <img src="<?php echo get_template_directory_uri() ?>/img/clients/001.jpg" alt="">
-        <img src="<?php echo get_template_directory_uri() ?>/img/clients/002.jpg" alt="">
-        <img src="<?php echo get_template_directory_uri() ?>/img/clients/003.jpg" alt="">
-        <img src="<?php echo get_template_directory_uri() ?>/img/clients/004.png" alt="">
-        <img src="<?php echo get_template_directory_uri() ?>/img/clients/001.jpg" alt="">
-        <img src="<?php echo get_template_directory_uri() ?>/img/clients/002.jpg" alt="">
-        <img src="<?php echo get_template_directory_uri() ?>/img/clients/003.jpg" alt="">
-        <img src="<?php echo get_template_directory_uri() ?>/img/clients/004.png" alt="">
-        <img src="<?php echo get_template_directory_uri() ?>/img/clients/001.jpg" alt="">
-        <img src="<?php echo get_template_directory_uri() ?>/img/clients/002.jpg" alt="">
-        <img src="<?php echo get_template_directory_uri() ?>/img/clients/003.jpg" alt="">
-        <img src="<?php echo get_template_directory_uri() ?>/img/clients/004.png" alt="">
-        <img src="<?php echo get_template_directory_uri() ?>/img/clients/001.jpg" alt="">
-        <img src="<?php echo get_template_directory_uri() ?>/img/clients/002.jpg" alt="">
-        <img src="<?php echo get_template_directory_uri() ?>/img/clients/003.jpg" alt="">
-        <img src="<?php echo get_template_directory_uri() ?>/img/clients/004.png" alt="">
-    </div> -->
 </section>
 </main>
 <?php get_footer(); ?>

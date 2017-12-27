@@ -15,7 +15,6 @@
 
 .single-partner{
     position: relative;
-    margin-bottom: 100px;
     text-align: center;
     img{
         max-width: 100%;
@@ -90,37 +89,46 @@
         padding-bottom: 40px;
     }
     .single-partner{
+        margin: 50px 0;
         text-align: left;
-    }
-    .single-partner-info{
-        position: absolute;
-        // height: 80%;
-        top: 10%;
-        right: 0;
-        max-width: 70%;
-        transform: none;
-        text-align: right;
-        .single-partner-name{
-            color: $white;       
-            padding: 10px;
-            padding-left: 20px;
-            text-align: left;
-            &::before{
-                content: '';
-                position: absolute;
-                top: 0;
-                left: -20px;
-                width: 100%;
-                height: 100%;
-                background-image: url('../img/h3.png');
-                background-repeat: no-repeat;
-                background-size: contain;
-                z-index: -1;
-            }
+        img{
+            position: absolute;
         }
+        .single-partner-info{
+            position: relative;
+            max-width: 70%;
+            transform: none;
+            margin-left: auto;
+            .single-partner-name{
+                color: $white;       
+                padding: 10px;
+                padding-left: 20px;
+                text-align: left;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: -20px;
+                    width: 100%;
+                    height: 100%;
+                    background-image: url('../img/h3.png');
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    z-index: -1;
+                }
+            }
+    }
+    &:nth-child(even){
+        img{
+            right: 0;
+        }
+        .single-partner-info{
+            margin-left: 0;
+            text-align: left;
+        }
+    }
         div{
             line-height: 22px;
         }
-    }
-    
+    }   
 }

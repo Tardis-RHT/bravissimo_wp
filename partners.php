@@ -51,7 +51,7 @@
     <div class="partners_logo-container">
     <?php
                 global $post;
-                $args = array('posts_per_page' => 0,'post_type' => 'clients', 'order' => 'DESC' );
+                $args = array('numberposts' => 0,'post_type' => 'clients', 'order' => 'DESC' );
                 $myposts = get_posts( $args );
                 foreach( $myposts as $post ){ setup_postdata($post);
                     ?>

@@ -5,6 +5,7 @@
     <?php
     if(is_404()){
         echo "<title>Такой страницы нет | " . bloginfo("name") . "</title>";
+        echo "<meta name=\"robots\"content=\"noindex,nofollow\">";
     }
     ?>
 

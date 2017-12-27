@@ -15,19 +15,70 @@
     </div> 
 </header>
 <section class="partners-container wrapper">
-    <div class="single-partner">
-        <img src="<?php echo get_template_directory_uri() ?>/img/italy-tips1.png" alt="partner1">
-        <div class="single-partner-info">
-            <h3 class="single-partner-name">Клиент 1</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus rerum dolorum dolores aliquid suscipit maiores culpa, magnam similique laudantium repudiandae facere at! Necessitatibus maxime beatae debitis minus culpa, recusandae quos!</p>
-            <a href="#" class="button">link</a>
-        </div>
+
+<?php
+                global $post;
+                $args = array('posts_per_page' => 0,'post_type' => 'clients', 'order' => 'DESC' );
+                $myposts = get_posts( $args );
+                foreach( $myposts as $post ){ setup_postdata($post);
+                    ?>
+
+            <div class="single-partner">
+                <img src="<?php echo get_the_post_thumbnail_url();?>" alt="partner1">
+                <div class="single-partner-info">
+                    <a href="<?php echo get_post_meta( $post->ID, 'link', true ); ?>" title="<?php the_title(); ?>" target="_blank">
+                        <h3 class="single-partner-name"><?php the_title(); ?></h3>
+                    </a>
+                    <h4 class="single-partner-job"><?php echo get_post_meta( $post->ID, 'job', true ); ?></h4>
+                    <?php echo get_the_content(); ?>
+                    <!-- <a href="#" class="button">link</a> -->
+                </div>
+            </div>
+
+            <?php
+                }
+                wp_reset_postdata();
+            ?>
+
+
+    <div class="partners_logo-container">
+    <?php
+                global $post;
+                $args = array('posts_per_page' => 0,'post_type' => 'clients', 'order' => 'DESC' );
+                $myposts = get_posts( $args );
+                foreach( $myposts as $post ){ setup_postdata($post);
+                    ?>
+                    <img src="<?php 
+                        $image = get_field('logo');
+                        $url = $image['url'];
+                        echo $url; 
+                    ?>" alt="<?php the_title(); ?>">
+            <?php
+                }
+                wp_reset_postdata();
+            ?>
     </div>
-    <!-- <div>
+    <!-- <div class="partners_logo-container">
         <img src="<?php echo get_template_directory_uri() ?>/img/clients/001.jpg" alt="">
         <img src="<?php echo get_template_directory_uri() ?>/img/clients/002.jpg" alt="">
         <img src="<?php echo get_template_directory_uri() ?>/img/clients/003.jpg" alt="">
-        <img src="<?php echo get_template_directory_uri() ?>/img/clients/004.jpg" alt="">
+        <img src="<?php echo get_template_directory_uri() ?>/img/clients/004.png" alt="">
+        <img src="<?php echo get_template_directory_uri() ?>/img/clients/001.jpg" alt="">
+        <img src="<?php echo get_template_directory_uri() ?>/img/clients/002.jpg" alt="">
+        <img src="<?php echo get_template_directory_uri() ?>/img/clients/003.jpg" alt="">
+        <img src="<?php echo get_template_directory_uri() ?>/img/clients/004.png" alt="">
+        <img src="<?php echo get_template_directory_uri() ?>/img/clients/001.jpg" alt="">
+        <img src="<?php echo get_template_directory_uri() ?>/img/clients/002.jpg" alt="">
+        <img src="<?php echo get_template_directory_uri() ?>/img/clients/003.jpg" alt="">
+        <img src="<?php echo get_template_directory_uri() ?>/img/clients/004.png" alt="">
+        <img src="<?php echo get_template_directory_uri() ?>/img/clients/001.jpg" alt="">
+        <img src="<?php echo get_template_directory_uri() ?>/img/clients/002.jpg" alt="">
+        <img src="<?php echo get_template_directory_uri() ?>/img/clients/003.jpg" alt="">
+        <img src="<?php echo get_template_directory_uri() ?>/img/clients/004.png" alt="">
+        <img src="<?php echo get_template_directory_uri() ?>/img/clients/001.jpg" alt="">
+        <img src="<?php echo get_template_directory_uri() ?>/img/clients/002.jpg" alt="">
+        <img src="<?php echo get_template_directory_uri() ?>/img/clients/003.jpg" alt="">
+        <img src="<?php echo get_template_directory_uri() ?>/img/clients/004.png" alt="">
     </div> -->
 </section>
 </main>

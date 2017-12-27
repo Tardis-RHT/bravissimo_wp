@@ -141,6 +141,7 @@ add_action('init', 'create_post_type_offers');
 add_action('init', 'create_post_type_teachers');
 add_action('init', 'create_post_type_library');
 add_action('init', 'create_post_type_news');
+add_action('init', 'create_post_type_clients');
 
 
 // add_action('init', 'html5wp_pagination'); // Add our HTML5 Pagination
@@ -351,6 +352,45 @@ function create_post_type_news()
             'search_items' => __('Искать новость', 'html5blank'),
             'not_found' => __('Новость не найдена', 'html5blank'),
             'not_found_in_trash' => __('Новость не найдена в корзине', 'html5blank')
+        ),
+        'public' => true,
+        'hierarchical' => true, // Allows your posts to behave like Hierarchy Pages
+        'has_archive' => true,
+        'supports' => array(
+            'title',
+            'editor',
+            'excerpt',
+            'thumbnail',
+            'custom-fields'
+        ), // Go to Dashboard Custom HTML5 Blank post for supports
+        'can_export' => true, // Allows export in Tools > Export
+        'taxonomies' => array(
+            'post_tag',
+            'category'
+        ) // Add Category and Post Tags support
+    ));
+}
+
+function create_post_type_clients()
+{
+    register_taxonomy_for_object_type('category', 'clients'); // Register Taxonomies for Category
+    register_taxonomy_for_object_type('post_tag', 'clients');
+    register_post_type('clients', // Register Custom Post Type
+        array(
+        'menu_icon' => 'dashicons-groups',
+        'labels' => array(
+            'name' => __('Клиенты', 'clients'), // Rename these to suit
+            'singular_name' => __('Клиенты', 'clients'),
+            'add_new' => __('Добавить', 'clients'),
+            'add_new_item' => __('Добавить', 'clients'),
+            'edit' => __('Редактировать', 'clients'),
+            'edit_item' => __('Редактировать Клиентов', 'clients'),
+            'new_item' => __('Добавить', 'clients'),
+            'view' => __('Просмотреть', 'clients'),
+            'view_item' => __('Просмотреть', 'clients'),
+            'search_items' => __('Найти', 'clients'),
+            'not_found' => __('Страница не найдена', 'clients'),
+            'not_found_in_trash' => __('Страница не найдена в корзине', 'clients')
         ),
         'public' => true,
         'hierarchical' => true, // Allows your posts to behave like Hierarchy Pages

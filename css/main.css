@@ -2117,7 +2117,7 @@ main {
 
 .button_programs:hover {
   background-color: transparent;
-  color: #191919;
+  color: #cc2211;
 }
 
 @media only screen and (min-width: 760px) {

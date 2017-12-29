@@ -62,7 +62,22 @@ $(document).ready(function() {
         }
       );
   });
+  //buton progamm
+  $('.button_programs').click( function(event){
+    event.preventDefault();
+    var prog = $(this).val();
+    $('#program').val(prog);
+  });
+
 });
+
+
+
+
+
+
+
+
 
 //old way to show thankyou
 // $('.button_submit').click(function(){

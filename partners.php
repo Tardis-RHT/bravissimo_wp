@@ -18,7 +18,7 @@
 
 <?php
                 global $post;
-                $args = array('numberposts' => 0,'post_type' => 'clients', 'order' => 'DESC' );
+                $args = array('posts_per_page' => 0,'post_type' => 'clients', 'order' => 'DESC' );
                 $myposts = get_posts( $args );
                 foreach( $myposts as $post ){ setup_postdata($post);
                     ?>
@@ -33,7 +33,7 @@
                     }
                 ?>
                 <div class="single-partner-info">
-                    <a href="<?php echo get_post_meta( $post->ID, 'link', true ); ?>" title="<?php the_title(); ?>" target="_blank" rel="noindex, nofollow">
+                    <a href="<?php echo get_post_meta( $post->ID, 'link', true ); ?>" title="<?php the_title(); ?>" target="_blank">
                         <h3 class="single-partner-name"><?php the_title(); ?></h3>
                     </a>
                     <h4 class="single-partner-job"><?php echo get_post_meta( $post->ID, 'job', true ); ?></h4>
@@ -50,20 +50,22 @@
 
     <div class="partners_logo-container">
     <?php
-                global $post;
-                $args = array('numberposts' => 0,'post_type' => 'clients', 'order' => 'DESC' );
-                $myposts = get_posts( $args );
-                foreach( $myposts as $post ){ setup_postdata($post);
-                    ?>
-                    <img src="<?php 
-                        $image = get_field('logo');
-                        $url = $image['url'];
-                        echo $url; 
-                    ?>" alt="<?php the_title(); ?> logo">
-            <?php
-                }
-                wp_reset_postdata();
-            ?>
+        global $post;
+        $args = array('posts_per_page' => 0,'post_type' => 'clients', 'order' => 'DESC' );
+        $myposts = get_posts( $args );
+        foreach( $myposts as $post ){ setup_postdata($post);
+        if( get_field('logo') ): ?>
+        
+            <img src="<?php 
+                $image = get_field('logo');
+                $url = $image['url'];
+                echo $url; 
+            ?>" alt="<?php the_title(); ?>-logo">
+
+        <?php endif;
+            }
+            wp_reset_postdata();
+        ?>
     </div>
 </section>
 </main>

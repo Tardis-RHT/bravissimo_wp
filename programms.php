@@ -41,7 +41,10 @@
 				            }
 						}
 			        ?>
-					<p class="programs_comment"><?php echo get_post_meta( $post->ID, 'comment', true ); ?></p>
+					<p class="programs_comment">
+						<?php echo get_post_meta( $post->ID, 'comment', true ); ?>
+					</p>
+					<button class="button_programs"><?php echo LangDicts::$dict['submit']; ?></button>
 				</div>
                 <?php
             }

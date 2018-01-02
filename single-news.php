@@ -7,7 +7,7 @@ Template Name: single-news
 <section class="wrapper">
     <img class="news-title_img" src="<?php echo get_the_post_thumbnail_url();?>" alt="">
     <p class="news-single_date"><?php echo get_the_date('j.n.Y'); ?></p>
-    <h3 class="news_title"><?php the_title(); ?></h3>
+    <h1 class="news_title"><?php the_title(); ?></h1>
     <div class="content  margin-bottom">
         <?php the_post(); the_content(); ?>
     </div>

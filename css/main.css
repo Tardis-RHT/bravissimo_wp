@@ -1079,12 +1079,6 @@ label {
   max-width: 100%;
 }
 
-@media (min-width: 1200px) {
-  .news_wrapper {
-    justify-content: space-between;
-  }
-}
-
 .article-phantom {
   height: 250px;
 }

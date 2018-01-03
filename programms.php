@@ -68,7 +68,7 @@
             </span>
 			<span class="wpcf7-form-control-wrap your-name"></span>
 
-			<input id="program" name="program" value="" size="40" class="wpcf7-form-control wpcf7-text name" aria-invalid="false" type="text" placeholder="Program name">
+			<input type="hidden" id="program" name="program" value="" size="40" class="wpcf7-form-control wpcf7-text name" aria-invalid="false" type="text" placeholder="Program name">
 
 			<input name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text name" 
 				aria-invalid="false" type="text" placeholder="<?php echo LangDicts::$dict['name']; ?>" >

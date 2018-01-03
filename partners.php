@@ -26,19 +26,18 @@
             <div class="single-partner">
                 <?php
                     if( has_post_thumbnail() ) {
-                        echo '<img src="' .get_the_post_thumbnail_url().' " alt="Our client" />'; 
+                        echo '<img src="' .get_the_post_thumbnail_url().' " alt="Our client <?php the_title(); ?>" />'; 
                     }
                     else {
-                        echo '<img src="'.get_template_directory_uri().'/img/italy-tips1.png" alt="Our client" />';
+                        echo '<img src="'.get_template_directory_uri().'/img/italy-tips1.png" alt="Our client <?php the_title(); ?>" />';
                     }
                 ?>
                 <div class="single-partner-info">
-                    <a href="<?php echo get_post_meta( $post->ID, 'link', true ); ?>" title="<?php the_title(); ?>" target="_blank">
+                    <a href="<?php echo get_post_meta( $post->ID, 'link', true ); ?>" title="<?php the_title(); ?>" target="_blank" rel="noindex, nofollow">
                         <h3 class="single-partner-name"><?php the_title(); ?></h3>
                     </a>
                     <h4 class="single-partner-job"><?php echo get_post_meta( $post->ID, 'job', true ); ?></h4>
                     <?php echo get_the_content(); ?>
-                    <!-- <a href="#" class="button">link</a> -->
                 </div>
             </div>
 

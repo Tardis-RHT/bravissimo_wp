@@ -532,6 +532,7 @@ label {
 
 .teacher_photo img {
   width: 180px;
+  height: auto;
 }
 
 .teacher_about {

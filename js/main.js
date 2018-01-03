@@ -8,7 +8,7 @@ $('#button_menu').click(function(){
 //correcting hamburger when resized
 
 $(window).resize(function(){
- if($(window).width() > 550){
+ if($(window).width() > 719){
   $('.header_menu').css('display', 'flex');
  }
  else{

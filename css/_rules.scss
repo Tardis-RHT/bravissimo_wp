@@ -253,3 +253,16 @@ label{
 .margin-bottom{
 	margin-bottom: 50px;
 }
+
+.alignleft{
+	@media (min-width: 552px){
+		float: left;
+		margin-right: 20px;
+    }
+}
+.alignright{
+	@media (min-width: 552px){
+		float: right;
+		margin-left: 20px;
+    }
+}

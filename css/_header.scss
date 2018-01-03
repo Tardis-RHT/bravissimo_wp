@@ -213,7 +213,7 @@
   }
   // END OF HAMBURGER BUTTON
 
-  @media (max-width:549px){
+  @media (max-width:719px){
 	.header_contacts-email{
 		display: none;
 	}
@@ -279,7 +279,7 @@
 .language-chooser .active > a{
 	color: $red;
 }
-@media (min-width:550px){
+@media (min-width:720px){
 	.header{
 		padding-bottom: 125px;
 	}

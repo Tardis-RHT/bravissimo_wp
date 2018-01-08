@@ -3,10 +3,8 @@
     Template Name: Library
     */
     get_header(); ?>
-
-    <main role="main">
+    
 <!-- //library// -->
-<div class="cont">
 <article class="main">
     <section class="wrapper margin-bottom">
         <h1><?php echo get_the_title($page->ID) ?></h1>
@@ -19,11 +17,14 @@
                 ?>
                 <div class="library-wrapper">
                     <div class="library_img" >
-                        <img class="library_img_img" src=" <?php echo get_the_post_thumbnail_url($post->ID, 'medium'); ?> ">
+                        <img class="library_img_img" src=" <?php echo get_the_post_thumbnail_url($post->ID, 'medium'); ?> " alt="<?php
+                    echo get_post_meta(get_post_thumbnail_id( $post->ID ), '_wp_attachment_image_alt', true);?>">
                     </div>
 
                     <h4><?php echo get_post_meta( $post->ID, 'level', true ); ?></h4>
-                    <p class="library_annotation"><?php the_content(); ?></p>
+                    <!-- <p class="library_annotation"> -->
+                        <?php the_content(); ?>
+                    <!-- </p> -->
                     <div style="height: 100%"></div>
                     <div>
                         

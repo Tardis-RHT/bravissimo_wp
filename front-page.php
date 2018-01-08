@@ -22,7 +22,7 @@
                 <input name="_wpcf7_nonce" value="d933b485eb" type="hidden">
             </div>
             <span id="modal_close">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/test-wrong.svg">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/test-wrong.svg" alt="close">
             </span>
                     <span class="wpcf7-form-control-wrap your-name"></span>
                     <input name="your-name" value="" size="40" 
@@ -61,11 +61,11 @@
 <section class="wrapper">
     <div class="tech_wrapper">
         <a href="/italian-test" class="tech">
-            <img class="tech_img" src="<?php echo get_template_directory_uri(); ?>/img/writing.svg">
+            <img class="tech_img" src="<?php echo get_template_directory_uri(); ?>/img/writing.svg" alt="Пройти тест">
             <p class="tech_button">Пройти тест</p>
         </a>
-        <a href="/skype_lessons" class="tech">
-            <img class="tech_img" src="<?php echo get_template_directory_uri(); ?>/img/video-chat.svg">
+        <a href="/skype-lessons" class="tech">
+            <img class="tech_img" src="<?php echo get_template_directory_uri(); ?>/img/video-chat.svg" alt="Уроки по скайпу">
             <p class="tech_text">Уроки по скайпу</p>
         </a>
     </div>
@@ -130,7 +130,7 @@
                     <p class="italian_icon-text"><?php echo LangDicts::$dict['travel']; ?></p>
                 </div>
                 <div class="italian_logo">
-                    <img class="italian_logo-single" src="<?php echo get_template_directory_uri(); ?>/img/heart (1).svg" alt="relocation">
+                    <img class="italian_logo-single" src="<?php echo get_template_directory_uri(); ?>/img/heart.svg" alt="relocation">
                     <p class="italian_icon-text"><?php echo LangDicts::$dict['love']; ?></p>
                 </div>
                 <div class="italian_logo">
@@ -156,16 +156,16 @@
             foreach( $myposts as $post ){ setup_postdata($post);
                 ?>
                 <div class="education-type_single">
-                <div class="education-type-bg">
-                    <?php the_post_thumbnail(); ?>
+                    <div class="education-type-bg">
+                        <?php the_post_thumbnail(); ?>
+                    </div>
+                    <h3 class="education-type-title"><?php the_title(); ?></h3>
+                    <h4 class="education-type-price"><?php echo get_post_meta( $post->ID, 'price', true ); ?></h4>
+                    <p class="education-type-duration"><?php echo get_post_meta( $post->ID, 'duration', true ); ?></p>
+                    <!-- <ul class="education-type-benefits"> -->
+                    <?php the_content(); ?>
+                    <!-- </ul> -->
                 </div>
-                <h3 class="education-type-title"><?php the_title(); ?></h3>
-                <h4 class="education-type-price"><?php echo get_post_meta( $post->ID, 'price', true ); ?></h4>
-                <p class="education-type-duration"><?php echo get_post_meta( $post->ID, 'duration', true ); ?></p>
-                <ul class="education-type-benefits">
-                   <?php the_content(); ?>
-                </ul>
-            </div>
                 <?php
             }
             wp_reset_postdata();
@@ -186,7 +186,7 @@
             foreach( $myposts as $post ){ setup_postdata($post);
                 ?>
             <a class="news_single" href="<?php the_permalink(); ?>">
-                <img class="news-single_img" src="<?php echo get_the_post_thumbnail_url();?>" alt="">
+                <img class="news-single_img" src="<?php the_post_thumbnail_url('news-image');?>" alt="<?php the_title(); ?>">
                 <div class="news-single_about">
                     <p class="news-single_date"><?php echo get_the_date('j.n.Y'); ?></p>
                     <h3 class="news_title"><?php the_title(); ?></h3>
@@ -216,7 +216,9 @@
             <div class="learning_wrapper-small_02">
                 <div class="learning_text_right">
                     <h3 class="learning_h3">...<?php echo LangDicts::$dict['hard']; ?></h3>
-                    <p><?php echo get_post_meta( $post->ID, 'hard', true ); ?></p>
+                    <!-- <p> -->
+                        <?php echo get_post_meta( $post->ID, 'hard', true ); ?>
+                    <!-- </p> -->
                 </div>
             </div>
         </div>
@@ -230,27 +232,27 @@
         <div class="wrapper">
             <div class="flags_wrapper">
                 <div class="flag_wrpapper">
-                    <img class="section-flag" src="<?php echo get_template_directory_uri(); ?>/img/italy.svg">
+                    <img class="section-flag" src="<?php echo get_template_directory_uri(); ?>/img/italy.svg" alt="italy flag">
                     <span><?php echo LangDicts::$dict['italy']; ?></span>
                 </div>
                 <div class="flag_wrpapper">
-                    <img class="section-flag" src="<?php echo get_template_directory_uri(); ?>/img/vatican-city.svg">
+                    <img class="section-flag" src="<?php echo get_template_directory_uri(); ?>/img/vatican-city.svg" alt="vatican flag">
                     <span><?php echo LangDicts::$dict['vatican']; ?></span>
                 </div>
                 <div class="flag_wrpapper">
-                    <img class="section-flag" src="<?php echo get_template_directory_uri(); ?>/img/san-marino.svg">
+                    <img class="section-flag" src="<?php echo get_template_directory_uri(); ?>/img/san-marino.svg" alt="san-marino flag">
                     <span><?php echo LangDicts::$dict['san-marino']; ?></span>
                 </div>
                 <div class="flag_wrpapper">
-                    <img class="section-flag" src="<?php echo get_template_directory_uri(); ?>/img/switzerland.svg">
+                    <img class="section-flag" src="<?php echo get_template_directory_uri(); ?>/img/switzerland.svg" alt="switzerland flag">
                     <span><?php echo LangDicts::$dict['switzerland']; ?></span>
                 </div>
                 <div class="flag_wrpapper">
-                    <img class="section-flag" src="<?php echo get_template_directory_uri(); ?>/img/slovenia.svg">
+                    <img class="section-flag" src="<?php echo get_template_directory_uri(); ?>/img/slovenia.svg" alt="slovenia flag">
                     <span><?php echo LangDicts::$dict['slovenia']; ?></span>
                 </div>
                 <div class="flag_wrpapper">
-                    <img class="section-flag" src="<?php echo get_template_directory_uri(); ?>/img/croatia.svg">
+                    <img class="section-flag" src="<?php echo get_template_directory_uri(); ?>/img/croatia.svg" alt="croatia flag">
                     <span><?php echo LangDicts::$dict['croatia']; ?></span>
                 </div>
             </div>
@@ -269,5 +271,6 @@
     </div>
 </section>
 <!-- //end of beautiful picture at bottom// -->
+
 </main>
 <?php get_footer(); ?>

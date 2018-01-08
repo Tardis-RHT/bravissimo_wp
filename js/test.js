@@ -454,14 +454,14 @@
 	}
 
 var questionNumber = 0;
-	var questionsArray = new Array();
-	var answersArray = new Array();
-	var mistakesArray = new Array();
-	var levelArray = new Array();
-	var questionTitle = document.getElementById("questionTitle");
-	var questionText = document.getElementById("questionText");
-	var questionDefinition = document.getElementById("questionDefinition");
-	var questionOptions = document.getElementById("questionOptions");
-	var questionButton = document.getElementById("questionButton");
+var questionsArray = new Array();
+var answersArray = new Array();
+var mistakesArray = new Array();
+var levelArray = new Array();
+var questionTitle = document.getElementById("questionTitle");
+var questionText = document.getElementById("questionText");
+var questionDefinition = document.getElementById("questionDefinition");
+var questionOptions = document.getElementById("questionOptions");
+var questionButton = document.getElementById("questionButton");
 
 	initialiseArray();

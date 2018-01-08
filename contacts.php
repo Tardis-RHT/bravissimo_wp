@@ -5,7 +5,6 @@
 Template Name: Contacts page 2
 */
 get_header(); ?>
-<main role="main">
 
     <article>
 
@@ -17,23 +16,23 @@ get_header(); ?>
                 <div class="contact_content">
 
                     <div class="contact_address">
-                        <img class="contact_logo" src="<?php echo get_template_directory_uri(); ?>/img/placeholder.svg">
+                        <img class="contact_logo" src="<?php echo get_template_directory_uri(); ?>/img/placeholder.svg" alt="address">
                         <p class="contact_address-text"><?php echo get_post_meta(69, 'adress', true); ?></p>
                         <p><?php echo get_post_meta(69, 'adress-2', true); ?></p>
                     </div>
 
                     <div class="contact_tell">
-                        <img class="contact_logo" src="<?php echo get_template_directory_uri(); ?>/img/smartphone.svg">
+                        <img class="contact_logo" src="<?php echo get_template_directory_uri(); ?>/img/smartphone.svg" alt="telephone">
                         <p class="contact_tell-text-1"><a
-                                    href="tel:'<?php echo get_post_meta(69, 'tel1', true); ?>'"><?php echo get_post_meta(69, 'tel1', true); ?></a>
+                                    href="tel:'<?php echo str_replace(" ","",get_post_meta(69, 'tel1', true)); ?>'"><?php echo get_post_meta(69, 'tel1', true); ?></a>
                         </p>
                         <p class="contact_tell-text-2"><a
-                                    href="tel:'<?php echo get_post_meta(69, 'tel2', true); ?>'"><?php echo get_post_meta(69, 'tel2', true); ?></a>
+                                    href="tel:'<?php echo str_replace(" ","",get_post_meta(69, 'tel2', true)); ?>'"><?php echo get_post_meta(69, 'tel2', true); ?></a>
                         </p>
                     </div>
 
                     <div class="contact_email">
-                        <img class="contact_logo" src="<?php echo get_template_directory_uri(); ?>/img/envelope.svg">
+                        <img class="contact_logo" src="<?php echo get_template_directory_uri(); ?>/img/envelope.svg" alt="email">
                         <p class="contact_email-text"><a
                                     href="mailto:'<?php echo get_post_meta( 69, 'e-mail', true ); ?>'"><?php echo get_post_meta(69, 'e-mail', true); ?></a>
                         </p>
@@ -43,7 +42,7 @@ get_header(); ?>
                 <div class="contact_wraper-map">
                     <div class="contact_map">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2539.7430684764204!2d30.510270316018072!3d50.46450897947728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce6a5abca17d%3A0xe1ab8a4f48d3f50c!2z0LLRg9C70LjRhtGPINCl0L7RgNC40LLQsCwgMdCQLCDQmtC40ZfQsg!5e0!3m2!1suk!2sua!4v1501419946028"
-                                width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                                width="600" height="450" style="border:0" allowfullscreen></iframe>
                     </div>
 
                 </div>
@@ -93,8 +92,8 @@ get_header(); ?>
                     </form>
                 </div>
             </div>
+        </div>
     </article>
 
 </main>
-
 <?php get_footer(); ?>

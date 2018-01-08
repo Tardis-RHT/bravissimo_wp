@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600|Roboto+Condensed&subset=cyrillic");
-@import url("https://fonts.googleapis.com/css?family=Marck+Script&subset=cyrillic");
-@import url("https://fonts.googleapis.com/css?family=Cormorant+Garamond:400i&subset=cyrillic");
+@import url('../fonts/main.css');
+@import url('../fonts/script.css');
+@import url('../fonts/cormorant.css');
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -120,7 +120,9 @@ button, input[type="submit"], input[type="button"], .library_button-download, .t
   font-family: "Open Sans", sans-serif;
   padding: 11px 38px;
   outline: none;
-  transition: background-color .3s, color .3s, border-color .3s;
+  transition: background-color .3s,
+ color .3s,
+ border-color .3s;
 }
 
 input[type="submit"], input[type="button"], .test-page_form-button,
@@ -1469,7 +1471,7 @@ label {
   -moz-appearance: none;
   appearance: none;
   box-shadow: none;
-  border-radius: none;
+  border-radius: 0;
   border: none;
   cursor: pointer;
   background: transparent;
@@ -1848,7 +1850,7 @@ label {
 
 .footer_instagram-icons {
   margin: 10px 0 0 10px;
-  background-image: url("../img/instagram (1).svg");
+  background-image: url("../img/instagram.svg");
   background-repeat: no-repeat;
   width: 45px;
   height: 45px;
@@ -2149,7 +2151,7 @@ main {
   /* Safari 6.1 - 8, Android < 4.4, BB < 10, Chrome 21 - 28 */
   display: flex;
   /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
-  flex-deirection: row;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
   font-family: "Roboto Condensed", sans-serif;

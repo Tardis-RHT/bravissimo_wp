@@ -4,7 +4,6 @@
     */
     get_header(); ?>
 
-    <main role="main">
 <!-- //test// -->
 
 <section class="test-page wrapper margin-bottom">
@@ -29,8 +28,7 @@
 </section>
 
 <!-- //end of test// -->
-	</main>
-	<?php get_footer(); ?>
+	
     <script>
         var question = '<?php echo LangDicts::$dict['test_question']; ?>',
             next_question = '<?php echo LangDicts::$dict['test_next_question']; ?>',
@@ -49,4 +47,5 @@
             rslt3 = '<?php echo LangDicts::$dict['result3']; ?>',
             results_txt3 = '<?php echo LangDicts::$dict['test_results_txt3']; ?>';
     </script>
-	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/test.js"></script>
+    </main>
+	<?php get_footer(); ?>

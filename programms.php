@@ -4,7 +4,6 @@
     */
     get_header(); ?>
 
-    <main role="main">
 
 <!-- //programs and shedule// -->
 
@@ -42,7 +41,7 @@
 					<p class="programs_comment">
 						<?php echo get_post_meta( $post->ID, 'comment', true ); ?>
 					</p>
-					<button id="btn_program" class="button_programs popup" value="<?php echo get_the_title(); ?>"><?php echo LangDicts::$dict['submit']; ?></button>
+					<button class="button_programs popup" value="<?php echo get_the_title(); ?>"><?php echo LangDicts::$dict['submit']; ?></button>
 				</div>
                 <?php
             }
@@ -64,11 +63,11 @@
                 <input name="_wpcf7_nonce" value="d933b485eb" type="hidden">
             </div>
             <span id="modal_close">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/test-wrong.svg">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/test-wrong.svg" alt="close">
             </span>
 			<span class="wpcf7-form-control-wrap your-name"></span>
 
-			<input type="hidden" id="program" name="program" value="" size="40" class="wpcf7-form-control wpcf7-text name" aria-invalid="false" type="text" placeholder="Program name">
+			<input type="hidden" id="program" name="program" value="" class="wpcf7-form-control wpcf7-text name" aria-invalid="false">
 
 			<input name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text name" 
 				aria-invalid="false" type="text" placeholder="<?php echo LangDicts::$dict['name']; ?>" >
@@ -94,6 +93,6 @@
 <div id="overlay"></div>
   <!-- END OF MODAL WINDOW -->
 <!-- //end of programs and schedule// -->
-</main>
 
+</main>
 <?php get_footer(); ?>

@@ -4,7 +4,6 @@
     */
     get_header(); ?>
 
-    <main role="main">
 
     <!-- //about us section//
     //why us// -->

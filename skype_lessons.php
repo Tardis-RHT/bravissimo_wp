@@ -4,7 +4,6 @@
     */
     get_header(); ?>
 
-    <main role="main">
 
 <section class="skype-lessons margin-bottom">
     <div class="wrapper">
@@ -42,7 +41,7 @@
                         <input name="_wpcf7_container_post" value="0" type="hidden">
                         <input name="_wpcf7_nonce" value="4f1add3592" type="hidden">
                     </div>
-                    <legend class="skype-lessons_form-title"><?php echo LangDicts::$dict['testing_lesson_txt']; ?></legend>
+                    <p class="skype-lessons_form-title"><?php echo LangDicts::$dict['testing_lesson_txt']; ?></p>
                     
                         <input name="your-name" value="" size="40" 
                             class="wpcf7-form-control wpcf7-text skype-lessons_form-name" 
@@ -70,7 +69,6 @@
 </section>
 
 <!-- //end of skype lessons// -->
-	</main>
-
+</main>
     <?php get_footer(); ?>
 

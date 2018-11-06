@@ -91,8 +91,6 @@
         <iframe src="https://www.youtube.com/embed/B9_2MhANkPk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </div>
-
-
 </section>
 <!-- //end of video// -->
 

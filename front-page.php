@@ -72,6 +72,17 @@
 </section>
 <!-- //end of test & skype// -->
 
+<!-- //video// -->
+<section class="wrapper margin-bottom">
+    <h2 class="h2">О нас</h2>
+    <div class="video">
+        <div class="video_container">
+        <iframe src="https://www.youtube.com/embed/B9_2MhANkPk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+</section>
+<!-- //end of video// -->
+
 <!-- //programs section// -->
 <section class="wrapper margin-bottom">
     <h2 class="programs_h2 h2"><?php echo LangDicts::$dict['programs']; ?></h2>
